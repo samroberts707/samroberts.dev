@@ -40,7 +40,7 @@ gulp.task('build',['sass:watch','js:watch']);
 gulp.task('runserver', function() {
     var runserver = spawn(
       '../venv/bin/python',
-      ['manage.py', 'runserver', '8000'],
+      ['manage.py', 'runserver', '8000', '--settings', 'website.settings_local'],
       {
         stdio: 'inherit',
         cwd: '../website/'
