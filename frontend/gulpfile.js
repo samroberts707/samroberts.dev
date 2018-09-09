@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
+var spawn = require('child_process').spawn;
 
 var sassSource = './sass/';
 var jsSource = './js/';
@@ -35,3 +36,24 @@ gulp.task('js:watch', function() {
 })
 
 gulp.task('build',['sass:watch','js:watch']);
+
+gulp.task('runserver', function() {
+    var runserver = spawn(
+      '../venv/bin/python',
+      ['manage.py', 'runserver', '8000'],
+      {
+        stdio: 'inherit',
+        cwd: '../website/'
+      }
+    );
+
+    runserver.on('close', function(code) {
+        if (code !== 0) {
+            console.error('Django runserver exited with error code: ' + code);
+        } else {
+            console.log('Django runserver exited normally.');
+        }
+    });
+});
+
+gulp.task('default',['build','runserver']);
