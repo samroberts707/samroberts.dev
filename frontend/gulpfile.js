@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var spawn = require('child_process').spawn;
+var shell = require('gulp-shell');
 
 var sassSource = './sass/';
 var jsSource = './js/';
@@ -55,5 +56,20 @@ gulp.task('runserver', function() {
         }
     });
 });
+
+gulp.task('migrate', shell.task(
+  '../venv/bin/python manage.py migrate --settings website.settings_local',
+  { cwd: '../website/', }
+));
+
+gulp.task('makem', shell.task(
+  '../venv/bin/python manage.py makemigrations --settings website.settings_local',
+  { cwd: '../website/', }
+));
+
+gulp.task('dumpdata', shell.task(
+  '../venv/bin/python manage.py dumpdata --settings website.settings_local --natural-primary --indent 4 > datadump.json',
+  { cwd: '../website/', }
+));
 
 gulp.task('default',['build','runserver']);
