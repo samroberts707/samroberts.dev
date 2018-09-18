@@ -1,3 +1,4 @@
-body {
-  background: red;
-}
+// These need to come first as they are the varaibles used in the rest of the SASS
+@import 'base/colours';
+@import 'base/fonts';
+@import 'base/variables';
