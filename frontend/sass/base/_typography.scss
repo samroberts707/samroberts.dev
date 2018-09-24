@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Google Product Sans';
+	src: url('/static/fonts/Product-Sans-Regular.ttf');
+}
+@import url('https://fonts.googleapis.com/css?family=Merienda:400,700');
+
+$heading-font: "Merienda", cursive;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	font-weight: 700;
+	font-style: normal;
+}
+
+p, a, li, span {
+	font-family: 'Google Product Sans';
+}

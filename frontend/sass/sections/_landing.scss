@@ -1,0 +1,39 @@
+div#landing {
+  width: 100%;
+  height: 100vh;
+  background-color: $navy;
+  top: 0;
+  .grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1px;
+  }
+  @media all and (-ms-high-contrast: none) {
+    .grid-container {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr 1fr;
+    }
+  }
+  .into-text {
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    h1 {
+      display: block;
+      font-size: 5vw;
+      color: #FFF;
+      white-space: nowrap;
+    }
+    p {
+      display: block;
+      font-size: 1.5vw;
+      line-height: 2vw;
+      color: #FFF;
+    }
+  }
+
+  .graphic { grid-area: 2 / 4 / 3 / 5; }
+
+}
