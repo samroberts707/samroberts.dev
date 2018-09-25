@@ -28,12 +28,18 @@ div#landing {
     }
     p {
       display: block;
-      font-size: 1.5vw;
-      line-height: 2vw;
+      font-size: 18px;
+      line-height: 22px;
       color: #FFF;
     }
   }
 
-  .graphic { grid-area: 2 / 4 / 3 / 5; }
+  .graphic {
+    grid-area: 2 / 4 / 3 / 5;
+    img.avatar {
+      display: block;
+      width: 100%;
+    }
+  }
 
 }
