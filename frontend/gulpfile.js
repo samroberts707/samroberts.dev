@@ -33,8 +33,8 @@ gulp.task("sass:watch", function() {
 });
 
 gulp.task("js:watch", function() {
-  gulp.watch(jsSource + "**/*.js", ["javascript"])
-})
+  gulp.watch(jsSource + "**/*.js", ["javascript"]);
+});
 
 gulp.task("build",["sass:watch","js:watch"]);
 
