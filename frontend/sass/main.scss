@@ -1,0 +1,15 @@
+// These need to go first as the rest of the stylesheets will pull from these.
+@import "base/reset";
+@import "base/colours";
+@import "base/typography";
+@import "base/variables";
+
+// These are the section stylesheets
+@import "./sections/landing";
+
+// Style that every page will need
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 600px;
+}
