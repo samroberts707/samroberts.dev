@@ -72,4 +72,9 @@ gulp.task("dumpdata", shell.task(
   { cwd: "../website/", }
 ));
 
+gulp.task("collectstatic", shell.task(
+  "../venv/bin/python manage.py collectstatic --settings website.settings_local",
+  { cwd: "../website/", }
+));
+
 gulp.task("default",["build","runserver"]);
