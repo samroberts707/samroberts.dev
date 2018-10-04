@@ -7,6 +7,9 @@
 // These are the section stylesheets
 @import "./sections/landing";
 
+// These are the component stylesheets
+@import "./components/navigation";
+
 // Style that every page will need
 body {
   padding: 0;

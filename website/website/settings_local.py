@@ -1,6 +1,6 @@
 from website.settings import *
 
-STATIC_ROOT = '/Applications/MAMP/htdocs/personal/Personal-Website/website/static/'
+STATIC_ROOT = '/Applications/MAMP/htdocs/personal/Personal-Website/website/'
 DEBUG = True
 
 CACHES = {

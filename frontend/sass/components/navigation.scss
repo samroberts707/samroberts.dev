@@ -1,0 +1,45 @@
+nav#navigation {
+  position: fixed;
+  width: 100%;
+  ul.nav-items {
+    list-style-type: none;
+    li {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      margin: 30px 15px;
+      font-size: 24px;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      a {
+        position: relative;
+        color: #FFF;
+        text-decoration: none;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 0; height: 3px;
+          display: block;
+          margin-top: 2px;
+          right: 0;
+          background: #fff;
+          transition: width .2s ease;
+          -webkit-transition: width .2s ease;
+        }
+        &:hover:after {
+          width: 100%;
+          left: 0;
+          background: #fff;
+        }
+      }
+    }
+  }
+  &.shrink {
+    ul.nav-items {
+      li {
+        margin: 15px;
+        font-size: 18px;
+      }
+    }
+  }
+}
