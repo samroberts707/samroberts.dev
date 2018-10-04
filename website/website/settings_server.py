@@ -1,6 +1,6 @@
 from website.settings import *
 
-STATIC_ROOT = '/srv/website/'
+STATIC_ROOT = '/srv/website/static/'
 DEBUG = False
 
 CACHES = {

@@ -15,5 +15,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "npm": "^6.4.1"
   }
 }
