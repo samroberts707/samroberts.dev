@@ -1,0 +1,27 @@
+div.seperator-wrapper {
+  width: 100%;
+  div.skew {
+    overflow: hidden;
+    height: 45vw;
+    max-height: 550px;
+    -ms-transform: skewY($skew-angle); /* IE 9 */
+    -webkit-transform: skewY($skew-angle); /* Safari */
+    transform: skewY($skew-angle); /* Standard syntax */
+    border-top: 6px solid $navy;
+    border-bottom: 6px solid $navy;
+    div.image-wrapper {
+      margin-top: -6%;
+      -ms-transform: skewY(-$skew-angle); /* IE 9 */
+      -webkit-transform: skewY(-$skew-angle); /* Safari */
+      transform: skewY(-$skew-angle); /* Standard syntax */
+      div.seperator-image {
+        width: 100%;
+        min-height: 750px;
+        background-image: url('https://artmarketdirect.com/wp-content/uploads/2017/09/london-cityscape.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
