@@ -1,5 +1,6 @@
 div.seperator-wrapper {
   width: 100%;
+  background: linear-gradient($navy 50%, #FFF 50%);
   div.skew {
     overflow: hidden;
     height: 45vw;
@@ -17,7 +18,7 @@ div.seperator-wrapper {
       div.seperator-image {
         width: 100%;
         min-height: 750px;
-        background-image: url('https://artmarketdirect.com/wp-content/uploads/2017/09/london-cityscape.jpg');
+        background-image: url('https://photos.smugmug.com/Beautiful-Cities-on-Planet-Earth/i-JrMZRkZ/0/667d2ae0/4K/Trey%20Ratcliff%20-%20Cityscapes%20%20-%202-4K.jpg');
         background-size: cover;
         background-position: bottom center;
         background-repeat: no-repeat;
