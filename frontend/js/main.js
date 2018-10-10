@@ -1,8 +1,11 @@
-window.addEventListener("scroll", function() {
-  var scrolledFromTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-  if(scrolledFromTop > 50) {
-    document.getElementById('navigation').classList.add('shrink');
+$(window).on("load", function() {
+  console.log('Window Loaded!');
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
   } else {
-    document.getElementById('navigation').classList.remove('shrink');
+    $('nav').removeClass('shrink');
   }
 });
