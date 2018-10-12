@@ -1,5 +1,7 @@
 $(window).on("load", function() {
   // This is for when I implement a loading screen.
+  $('body').css('overflow', 'auto');
+  $('#loader').addClass('loaded');
 });
 
 $(window).scroll(function() {
