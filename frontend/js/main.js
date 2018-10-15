@@ -14,3 +14,8 @@ $(window).scroll(function() {
     $('nav').removeClass("shrink");
   }
 });
+
+function expandNav(x) {
+  x.classList.toggle("expand");
+  $('#navigation').toggleClass("open");
+}

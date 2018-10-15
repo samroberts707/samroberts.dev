@@ -1,8 +1,8 @@
 // These need to go first as the rest of the stylesheets will pull from these.
-@import "base/reset";
-@import "base/colours";
-@import "base/typography";
-@import "base/variables";
+@import "./base/reset";
+@import "./base/colours";
+@import "./base/typography";
+@import "./base/variables";
 
 // These are the section stylesheets
 @import "./sections/landing";
