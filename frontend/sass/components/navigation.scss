@@ -92,4 +92,11 @@ nav#navigation {
       display: block;
     }
   }
+  @media (max-width: $desktop-breakpoint) {
+    ul.nav-items {
+      li {
+        font-size: 2vw;
+      }
+    }
+  }
 }
