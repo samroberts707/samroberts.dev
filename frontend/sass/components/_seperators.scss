@@ -1,13 +1,26 @@
 div.seperator-wrapper {
   width: 100%;
-  min-height: 450px;
+  min-height: 100vh;
   border-top: 6px solid $navy;
   border-bottom: 6px solid $navy;
   /* Create the parallax scrolling effect */
-  background-image: url('https://photos.smugmug.com/Portfolio/i-b3QZW27/0/41629f85/4K/Deep%20in%20the%20Guangxi%20Province%20of%20China-4K.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  &#seperator-1 {
+    background-image: url('https://photos.smugmug.com/Portfolio/i-b3QZW27/0/41629f85/4K/Deep%20in%20the%20Guangxi%20Province%20of%20China-4K.jpg');
+  }
+  &#seperator-2 {
+    background-image: url('https://photos.smugmug.com/Portfolio/i-Trrk6wb/0/e4cceaea/X3/The%20Long%20Road%20in%20NZ-X3.jpg');
+  }
+  &#seperator-3 {
+    background-image: url('https://photos.smugmug.com/Beautiful-Cities-on-Planet-Earth/i-xD69Q3W/0/c0f58247/X4/The%20Supershard-X4.jpg');
+  }
+  &#seperator-4 {
+    background-image: url('https://photos.smugmug.com/Portfolio/i-NCg3Qf9/0/60f5741c/X4/untitled%20%286492%20of%2011553%29_HDR-X4.jpg');
+  }
+  &#seperator-5 {
+    background-image: url('https://photos.smugmug.com/Portfolio/i-XW9V8VQ/0/be6b91a7/X4/Forever%20London-X4.jpg');
+  }
 }
