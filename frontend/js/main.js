@@ -1,5 +1,5 @@
 $(window).on("load", function() {
-  // This is for when I implement a loading screen.
+  // This turns off the loading div once all resources have loaded
   $('body').css('overflow', 'auto');
   $('#loader').addClass('loaded');
   setTimeout(function () {
@@ -14,3 +14,12 @@ $(window).scroll(function() {
     $('nav').removeClass("shrink");
   }
 });
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  if($("#navigation").hasClass("responsive")) {
+    $("#navigation").removeClass("responsive");
+  } else {
+    $("#navigation").addClass("responsive");
+  }
+}
