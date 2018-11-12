@@ -1,5 +1,6 @@
 # Personal-Website
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d3a2cfc63f15473e854373679151cd88)](https://app.codacy.com/app/samroberts707/Personal-Website?utm_source=github.com&utm_medium=referral&utm_content=samroberts707/Personal-Website&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/e0d6bd570ab941cb901bbf0a6041bc87)](https://www.codacy.com/app/samroberts707/Personal-Website?utm_source=github.com&utm_medium=referral&utm_content=samroberts707/Personal-Website&utm_campaign=Badge_Coverage)
 
 This is the open source repo for my personal website. Please check the [LICENSE](https://github.com/samroberts707/Personal-Website/blob/master/LICENSE) to see usage restrictions.
 

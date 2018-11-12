@@ -13,10 +13,22 @@
 
   {% include 'app/seperators/sep-1.html' %}
 
-  <div style="min-height:400px;"></div>
-  <div style="min-height:400px;"></div>
-  <div style="min-height:400px;"></div>
-  <div style="min-height:400px;"></div>
-  <div style="min-height:400px;"></div>
+  {% include 'app/sections/about-me.html' %}
+
+  {% include 'app/seperators/sep-2.html' %}
+
+  <div id="experience"></div>
+
+  {% include 'app/seperators/sep-3.html' %}
+
+  <div id="education"></div>
+
+  {% include 'app/seperators/sep-4.html' %}
+
+  <div id="projects" style="min-height:100vh;background-color:magenta;"></div>
+
+  {% include 'app/seperators/sep-5.html' %}
+
+  <div id="contact" style="min-height:100vh;background-color:orange;"></div>
 
 {% endblock %}
