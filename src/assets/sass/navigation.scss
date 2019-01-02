@@ -1,0 +1,12 @@
+nav#navigation {
+  display: block;
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
+}
