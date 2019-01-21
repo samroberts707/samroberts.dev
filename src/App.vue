@@ -17,4 +17,5 @@ export default {
 <style>
   @import url('./assets/sass/reset.scss');
   @import url('https://fonts.googleapis.com/css?family=Damion|Montserrat');
+  $mobile-break: 768px;
 </style>
