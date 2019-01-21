@@ -1,10 +1,15 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Test"]
+  resolves = ["GitHub Action for npm"]
 }
 
 action "Test" {
-  uses = "actions/npm@de7a3705a9510ee12702e124482fad6af249991b"
+  uses = "actions/npm@master"
   runs = "test"
-  secrets = ["GITHUB_TOKEN"]
+}
+
+action "GitHub Action for npm" {
+  uses = "actions/npm@master"
+  needs = ["Test"]
+  runs = "build"
 }
