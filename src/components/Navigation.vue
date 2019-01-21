@@ -21,14 +21,15 @@ export default {
 
 <style scoped lang="scss">
 nav#navigation {
-  display: block;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
   position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: auto;
+  height: 80px;
+  padding: 0 10%;
   div.logo {
-    display: inline-block;
-    margin: 30px;
+    justify-self: start;
     h1 {
       font-family: 'Damion', sans-serif;
       color: #4E4E4E;
@@ -44,12 +45,9 @@ nav#navigation {
     }
   }
   ul.nav-list {
-    display: inline-block;
-    text-align: right;
-    padding-right: 30px;
+    justify-self: end;
     li {
       display: inline-block;
-      margin: 30px 10px;
       a {
         position: relative;
         font-family: 'Montserrat', sans-serif;
