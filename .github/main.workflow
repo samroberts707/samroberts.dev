@@ -1,9 +1,10 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Run NPM RUN BUILD"]
+  resolves = ["Test"]
 }
 
-action "Run NPM RUN BUILD" {
+action "Test" {
   uses = "actions/npm@de7a3705a9510ee12702e124482fad6af249991b"
-  runs = "build"
+  runs = "test"
+  secrets = ["GITHUB_TOKEN"]
 }
