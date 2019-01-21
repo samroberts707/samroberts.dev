@@ -6,7 +6,6 @@ workflow "New workflow" {
 action "Test" {
   uses = "actions/npm@master"
   runs = "install"
-  args = "-i"
 }
 
 action "GitHub Action for npm" {
