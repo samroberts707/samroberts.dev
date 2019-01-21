@@ -104,7 +104,8 @@ nav#navigation {
         a {
           position: relative;
           font-family: 'Montserrat', sans-serif;
-          text-decoration: none;
+          text-decoration: line-through;
+          text-decoration-color: #f75d5d;
           padding: 7px;
           color: #787878;
           transition: color 0.3s;
