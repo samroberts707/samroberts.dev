@@ -1,6 +1,9 @@
 <template>
   <nav id="navigation">
-    <ul>
+    <div class="logo">
+      <h1>&#60;<span>SR</span>&#47;&#62;</h1>
+    </div>
+    <ul class="nav-list">
       <li><a href="#" class="nav-link">About Me</a></li>
       <li><a href="#" class="nav-link">Experience</a></li>
       <li><a href="#" class="nav-link">Projects</a></li>
@@ -23,7 +26,25 @@ nav#navigation {
   top: 0;
   left: 0;
   width: 100%;
-  ul {
+  div.logo {
+    display: inline-block;
+    margin: 30px;
+    h1 {
+      font-family: 'Damion', sans-serif;
+      color: #4E4E4E;
+      font-size: 32px;
+      line-height: 38px;
+      cursor: pointer;
+      span {
+        transition: color 0.3s;
+      }
+      &:hover span {
+        color: #f75d5d;
+      }
+    }
+  }
+  ul.nav-list {
+    display: inline-block;
     text-align: right;
     padding-right: 30px;
     li {
@@ -41,7 +62,7 @@ nav#navigation {
           left: 0;
           width: 100%;
           height: 2px;
-          background: red;
+          background: #f75d5d;
           content: '';
           opacity: 0;
           -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -64,7 +85,7 @@ nav#navigation {
           transform: translateY(10px);
         }
         &:hover, &:focus {
-          color: red;
+          color: #f75d5d;
         }
         &:hover::before, &:focus::before, &:hover::after, &:focus::after {
           opacity: 1;

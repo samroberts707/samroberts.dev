@@ -16,5 +16,5 @@ export default {
 
 <style>
   @import url('./assets/sass/reset.scss');
-  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+  @import url('https://fonts.googleapis.com/css?family=Damion|Montserrat');
 </style>
