@@ -37,7 +37,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$mobile-break: 768px;
 nav#navigation {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -56,7 +55,7 @@ nav#navigation {
       cursor: pointer;
       span {
         transition: color 0.3s;
-        @media screen and (max-width: $mobile-break) {
+        @media screen and (max-width: 768px) {
           color: #f75d5d;
         }
       }
@@ -77,13 +76,13 @@ nav#navigation {
         margin: 7px 0;
         transition: transform 0.3s ease-in-out;
         &.two {
-        width: 20px;
-        margin-left: 5px;
-        opacity: 1;
-        transition: opacity 0.3s ease-in-out;
+          width: 20px;
+          margin-left: 5px;
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
         }
       }
-      @media screen and (max-width: $mobile-break) {
+      @media screen and (max-width: 768px) {
         display: block;
         &.open {
           div.bar.one {
@@ -147,7 +146,7 @@ nav#navigation {
           }
         }
       }
-      @media screen and (max-width: $mobile-break) {
+      @media screen and (max-width: 768px) {
         position: absolute;
         left: 10%;
         top: -200px;
