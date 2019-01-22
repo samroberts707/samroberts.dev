@@ -45,6 +45,8 @@ nav#navigation {
   width: auto;
   height: 80px;
   padding: 0 10%;
+  background-color: #FFF;
+  z-index: 1;
   div.logo {
     justify-self: start;
     h1 {
@@ -68,6 +70,7 @@ nav#navigation {
     justify-self: end;
     div.hamburger {
       display: none;
+      z-index: 2;
       cursor: pointer;
       div.bar {
         width: 25px;
@@ -148,9 +151,11 @@ nav#navigation {
       }
       @media screen and (max-width: 768px) {
         position: absolute;
+        width: 80%;
         left: 10%;
         top: -200px;
         transition: top 0.5s ease-in-out;
+        background-color: #FFF;
         &.open {
           top: 80px;
         }
