@@ -13,6 +13,7 @@ docs/_book
 test/
 
 ### Vuejs ###
+dist
 node_modules
 .DS_Store
 
