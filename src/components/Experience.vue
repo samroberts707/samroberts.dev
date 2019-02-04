@@ -2,7 +2,7 @@
     <div id="experience">
         <h1>Experience</h1>
         <div class="timeline">
-            <div class="item">
+            <div class="item" v-in-viewport.once style="z-index:4;">
                 <div class="content-wrapper">
                     <h2>Full Stack Web Dev</h2>
                     <h4><a href="https://nucreative.co.uk" target="_blank">NU Creative</a></h4>
@@ -10,7 +10,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium scelerisque ipsum vitae elementum. Fusce lobortis enim sed libero vehicula mattis. Praesent faucibus tempus cursus. Praesent nec vehicula metus. Suspendisse quis diam euismod, venenatis ligula sed, cursus est.</p>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" v-in-viewport.once style="z-index:3;">
                 <div class="content-wrapper">
                     <h2>Junior Web Dev</h2>
                     <h4><a href="https://nucreative.co.uk" target="_blank">NU Creative</a></h4>
@@ -18,7 +18,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium scelerisque ipsum vitae elementum. Fusce lobortis enim sed libero vehicula mattis. Praesent faucibus tempus cursus. Praesent nec vehicula metus. Suspendisse quis diam euismod, venenatis ligula sed, cursus est.</p>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" v-in-viewport.once style="z-index:2;">
                 <div class="content-wrapper">
                     <h2>Systems and Database Manager</h2>
                     <h4><a href="https://www.noordgroup.co.uk" target="_blank">Noord Group</a></h4>
@@ -26,7 +26,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium scelerisque ipsum vitae elementum. Fusce lobortis enim sed libero vehicula mattis. Praesent faucibus tempus cursus. Praesent nec vehicula metus. Suspendisse quis diam euismod, venenatis ligula sed, cursus est.</p>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" v-in-viewport.once style="z-index:1;">
                 <div class="content-wrapper">
                     <h2>Junior Android Developer</h2>
                     <h4><a href="https://www.pandapayapp.com" target="_blank">Panda Pay</a></h4>
@@ -56,6 +56,11 @@ div#experience {
             position: relative;
             width: 50%;
             max-width: 50%;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            &.in-viewport {
+              opacity: 1;
+            }
             &::before {
                 position: absolute;
                 display: block;
@@ -80,6 +85,10 @@ div#experience {
                 border-right: 1px solid #000;
                 margin-right: 50%;
                 text-align: right;
+                transform: translateX(-100px);
+                &.in-viewport {
+                  transform: translateX(0);
+                }
                 &::before {
                     right: 0;
                 }
@@ -91,6 +100,10 @@ div#experience {
                 border-left: 1px solid #000;
                 margin-left: 50%;
                 text-align: left;
+                transform: translateX(100px);
+                &.in-viewport {
+                  transform: translateX(0);
+                }
                 &::after {
                     left: -10px;
                 }
@@ -147,6 +160,7 @@ div#experience {
                 border-right: none;
                 margin-right: 0;
                 text-align: left;
+                transform: translateX(100px);
                 &::before {
                     left: 0;
                 }
