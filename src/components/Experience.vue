@@ -5,7 +5,7 @@
             <div class="item" v-in-viewport.once style="z-index:4;">
                 <div class="content-wrapper">
                     <h2>Full Stack Web Dev</h2>
-                    <h4><a href="https://nucreative.co.uk" target="_blank">NU Creative</a></h4>
+                    <h4><a href="https://nucreative.co.uk" target="_blank" rel="noreferrer">NU Creative</a></h4>
                     <h4>Oct 18 - Present</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium scelerisque ipsum vitae elementum. Fusce lobortis enim sed libero vehicula mattis. Praesent faucibus tempus cursus. Praesent nec vehicula metus. Suspendisse quis diam euismod, venenatis ligula sed, cursus est.</p>
                 </div>
@@ -13,7 +13,7 @@
             <div class="item" v-in-viewport.once style="z-index:3;">
                 <div class="content-wrapper">
                     <h2>Junior Web Dev</h2>
-                    <h4><a href="https://nucreative.co.uk" target="_blank">NU Creative</a></h4>
+                    <h4><a href="https://nucreative.co.uk" target="_blank" rel="noreferrer">NU Creative</a></h4>
                     <h4>Oct 15 - Oct 18</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium scelerisque ipsum vitae elementum. Fusce lobortis enim sed libero vehicula mattis. Praesent faucibus tempus cursus. Praesent nec vehicula metus. Suspendisse quis diam euismod, venenatis ligula sed, cursus est.</p>
                 </div>
@@ -21,7 +21,7 @@
             <div class="item" v-in-viewport.once style="z-index:2;">
                 <div class="content-wrapper">
                     <h2>Systems and Database Manager</h2>
-                    <h4><a href="https://www.noordgroup.co.uk" target="_blank">Noord Group</a></h4>
+                    <h4><a href="https://www.noordgroup.co.uk" target="_blank" rel="noreferrer">Noord Group</a></h4>
                     <h4>Jun 15 - Oct 18</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium scelerisque ipsum vitae elementum. Fusce lobortis enim sed libero vehicula mattis. Praesent faucibus tempus cursus. Praesent nec vehicula metus. Suspendisse quis diam euismod, venenatis ligula sed, cursus est.</p>
                 </div>
@@ -29,7 +29,7 @@
             <div class="item" v-in-viewport.once style="z-index:1;">
                 <div class="content-wrapper">
                     <h2>Junior Android Developer</h2>
-                    <h4><a href="https://www.pandapayapp.com" target="_blank">Panda Pay</a></h4>
+                    <h4><a href="https://www.pandapayapp.com" target="_blank" rel="noreferrer">Panda Pay</a></h4>
                     <h4>Jan 15 - Jun 15</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium scelerisque ipsum vitae elementum. Fusce lobortis enim sed libero vehicula mattis. Praesent faucibus tempus cursus. Praesent nec vehicula metus. Suspendisse quis diam euismod, venenatis ligula sed, cursus est.</p>
                 </div>

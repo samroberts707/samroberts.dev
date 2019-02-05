@@ -4,8 +4,8 @@
       <div class="content">
         <h1>Hi, I'm Sam.</h1>
         <p>I'm a Full Stack Web Developer, currently living in London.</p>
-        <p>I currently work for <a href="https://nucreative.co.uk" target="_blank">NU Creative</a>, a design agency based at London Bridge.</p>
-        <p>My current favourite web stack to work in is, <a href="https://vuejs.org/" target="_blank">VueJS</a>, <a href="https://www.djangoproject.com/" target="_blank">Django</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> and <a href="https://www.nginx.com/" target="_blank">NGINX</a>. This site is currently built using VueJS.</p>
+        <p>I currently work for <a href="https://nucreative.co.uk" target="_blank" rel="noreferrer">NU Creative</a>, a design agency based at London Bridge.</p>
+        <p>My current favourite web stack to work in is, <a href="https://vuejs.org/" target="_blank" rel="noreferrer">VueJS</a>, <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">Django</a>, <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">PostgreSQL</a> and <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">NGINX</a>. This site is currently built using VueJS.</p>
       </div>
     </transition>
     <transition appear name="fade">
