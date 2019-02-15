@@ -1,6 +1,6 @@
 <template>
   <div id="experience">
-    <h1>Experience</h1>
+    <h1>Timeline</h1>
     <div class="timeline">
       <div class="item" v-for="(item, index) in experience" :key="index" :id="index" v-in-viewport.once v-bind:style="{'z-index': experience.length - index}">
         <div class="content-wrapper">
@@ -45,6 +45,13 @@ export default {
           'linkURL': 'https://www.pandapayapp.com',
           'startDate': 'Jan 15',
           'endDate': 'Jun 15'
+        },
+        {
+          'jobTitle': 'BSc Computer Science Degree',
+          'linkText': 'University of Greenwich',
+          'linkURL': 'https://www.gre.ac.uk/',
+          'startDate': 'Sept 12',
+          'endDate': 'May 15'
         }
       ]
     }

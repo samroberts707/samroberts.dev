@@ -5,11 +5,10 @@
     </div>
     <div class="menu">
       <ul class="nav-list" :class="{'open': navOpen}">
-        <li><a href="#" class="nav-link">About Me</a></li>
-        <li><a href="#" class="nav-link">Timeline</a></li>
-        <li><a href="#" class="nav-link">Projects</a></li>
-        <!-- <li><a href="#" class="nav-link">Education</a></li> -->
-        <li><a href="#" class="nav-link">Contact Me</a></li>
+        <li><a href="#landing" class="nav-link">About Me</a></li>
+        <li><a href="#experience" class="nav-link">Timeline</a></li>
+        <li><a href="#" class="nav-link disable">Projects</a></li>
+        <li><a href="#" class="nav-link disable">Contact Me</a></li>
       </ul>
       <div class="hamburger" :class="{'open': navOpen}" @click="toggleNav">
         <div class="bar one"></div>
@@ -106,11 +105,14 @@ nav#navigation {
         a {
           position: relative;
           font-family: 'Montserrat', sans-serif;
-          text-decoration: line-through;
-          text-decoration-color: #f75d5d;
+          text-decoration: none;
           padding: 7px;
           color: #787878;
           transition: color 0.3s;
+          &.disable {
+            text-decoration: line-through;
+            text-decoration-color: #f75d5d;
+          }
           &::before, &::after {
             position: absolute;
             left: 0;

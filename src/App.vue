@@ -19,5 +19,6 @@ export default {
   @import url('https://fonts.googleapis.com/css?family=Damion|Montserrat');
   body {
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
   }
 </style>
