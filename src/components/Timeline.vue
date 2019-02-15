@@ -14,7 +14,7 @@
 </template>
 <script>
 export default {
-  name: 'Experience',
+  name: 'Timeline',
   data: function () {
     return {
       experience: [
