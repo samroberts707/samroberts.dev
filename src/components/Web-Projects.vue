@@ -2,7 +2,26 @@
   <div id="web-projects">
     <div class="project">
       <div class="showcase">
-        <img src="images/mac-example.jpg" />
+        <div class="background-wrapper">
+          <img src="images/mac-front.png" />
+        </div>
+      </div>
+      <div class="information">
+        <h2>Case Study</h2>
+        <div class="technologies">
+          <img src="http://via.placeholder.com/100"/>
+          <img src="http://via.placeholder.com/100"/>
+          <img src="http://via.placeholder.com/100"/>
+          <img src="http://via.placeholder.com/100"/>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
+      </div>
+    </div>
+    <div class="project">
+      <div class="showcase">
+        <img src="images/mac-front.png" />
       </div>
       <div class="information">
         <h2>Case Study</h2>
@@ -43,6 +62,13 @@ export default {
       align-items: center;
       div.showcase {
         padding-right: 40px;
+        div.background-wrapper {
+          background-attachment: fixed;
+          background-size: contain;
+          background-position: 23%;
+          background-repeat: no-repeat;
+          // background-image: url('./images/ge.png');
+        }
         img {
           display: block;
           width: 100%;
