@@ -1,39 +1,17 @@
 <template>
   <div id="web-projects">
-    <div class="project">
+    <div class="project" v-for="project in projects" v-bind:key="project.title">
       <div class="showcase">
-        <div class="background-wrapper">
+        <div class="background-wrapper" style="background-image: url('{project.background}');">
           <img src="images/mac-front.png" />
         </div>
       </div>
       <div class="information">
-        <h2>Case Study</h2>
+        <h2>{ project.title }</h2>
         <div class="technologies">
-          <img src="http://via.placeholder.com/100"/>
-          <img src="http://via.placeholder.com/100"/>
-          <img src="http://via.placeholder.com/100"/>
-          <img src="http://via.placeholder.com/100"/>
+          <img v-for="tech in project.technologies" :src="tech.image" :alt="tech.name" v-bind:key="tech.name" />
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
-      </div>
-    </div>
-    <div class="project">
-      <div class="showcase">
-        <img src="images/mac-front.png" />
-      </div>
-      <div class="information">
-        <h2>Case Study</h2>
-        <div class="technologies">
-          <img src="http://via.placeholder.com/100"/>
-          <img src="http://via.placeholder.com/100"/>
-          <img src="http://via.placeholder.com/100"/>
-          <img src="http://via.placeholder.com/100"/>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.</p>
+        <p>{ project.content }</p>
       </div>
     </div>
   </div>
@@ -43,6 +21,24 @@
 export default {
   data: function () {
     return {
+      projects: [
+        {
+          'title': 'Gerald Edelman',
+          'url': 'https://www.geraldedelman.com/',
+          'background': './images/ge.png',
+          'technologies': [
+            {
+              'name': 'Django',
+              'image': 'https://www.djangoproject.com/s/img/logos/django-logo-positive.png'
+            },
+            {
+              'name': 'Python',
+              'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png'
+            }
+          ],
+          'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.'
+        }
+      ]
     }
   },
   methods: {
@@ -64,10 +60,9 @@ export default {
         padding-right: 40px;
         div.background-wrapper {
           background-attachment: fixed;
-          background-size: contain;
-          background-position: 23%;
+          background-size: 36%;
+          background-position: 18% top;
           background-repeat: no-repeat;
-          // background-image: url('./images/ge.png');
         }
         img {
           display: block;
