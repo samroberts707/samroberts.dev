@@ -1,17 +1,14 @@
 <template>
   <div id="web-projects">
-    <div class="project" v-for="project in projects" v-bind:key="project.title">
-      <div class="showcase">
-        <div class="background-wrapper" style="background-image: url('{project.background}');">
-          <img src="images/mac-front.png" />
+    <div class="project" :class="{'open': project.opened}" v-for="project in projects" v-bind:key="project.title" :id="project.title">
+      <div class="heading" @click="project.opened = !project.opened">
+        <img :src="project.background" class="project-background"/>
+        <div class="heading-overlay">
+          <h1>{{ project.title }}</h1>
         </div>
       </div>
-      <div class="information">
-        <h2>{ project.title }</h2>
-        <div class="technologies">
-          <img v-for="tech in project.technologies" :src="tech.image" :alt="tech.name" v-bind:key="tech.name" />
-        </div>
-        <p>{ project.content }</p>
+      <div class="content">
+        <p>{{ project.content }}</p>
       </div>
     </div>
   </div>
@@ -25,18 +22,9 @@ export default {
         {
           'title': 'Gerald Edelman',
           'url': 'https://www.geraldedelman.com/',
-          'background': './images/ge.png',
-          'technologies': [
-            {
-              'name': 'Django',
-              'image': 'https://www.djangoproject.com/s/img/logos/django-logo-positive.png'
-            },
-            {
-              'name': 'Python',
-              'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png'
-            }
-          ],
-          'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.'
+          'background': './images/gerald-edelman.jpg',
+          'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.',
+          'opened': false
         }
       ]
     }
@@ -48,51 +36,74 @@ export default {
 
 <style lang="scss" scoped>
   div#web-projects {
-  padding: 0 10%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
     div.project {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      position: relative;
+      left: 0;
+      top: 0;
       width: 100%;
-      min-height: 100vh;
-      justify-items: center;
-      align-items: center;
-      div.showcase {
-        padding-right: 40px;
-        div.background-wrapper {
-          background-attachment: fixed;
-          background-size: 36%;
-          background-position: 18% top;
-          background-repeat: no-repeat;
+      height: auto;
+      min-height: 100%;
+      transition: all 0.5s ease-in-out;
+      div.heading {
+        position: relative;
+        width: 100%;
+        height: 50vw;
+        &:hover {
+          div.heading-overlay {
+            left: 0;
+          }
         }
-        img {
-          display: block;
+        img.project-background {
           width: 100%;
-          height: auto;
+          height: 100%;
+          object-fit: cover;
+        }
+        div.heading-overlay {
+          position: absolute;
+          left: -100%;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.9);
+          transition: left 0.5s ease-in-out;
+          cursor: pointer;
+          h1 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3vw;
+            color: #FFFFFF;
+            white-space: nowrap;
+          }
         }
       }
-      div.information {
-        padding-left: 40px;
-        h2 {
-          font-size: 2.3vw;
-          margin-bottom: 20px;
-          text-align: center;
-        }
-        p {
-          font-size: 1.5vw;
-          line-height: 120%;
-          margin-bottom: 20px;
-        }
-        div.technologies {
-          display: grid;
-          // grid-template-columns: minmax(25%, 1fr);
-          justify-items: center;
-          align-items: center;
-          margin-bottom: 20px;
-          img {
-            // display: block;
-            // margin: 15px;
-            grid-row: 1;
+      div.content {
+        position: relative;
+        width: calc(100% - 60px);
+        height: auto;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+      }
+      &.open {
+        position: absolute;
+        left: 15%;
+        top: 50px;
+        width: 70%;
+        div.heading {
+          div.heading-overlay {
+            left: 0;
           }
+        }
+        div.content {
+          padding: 30px;
+          max-height: 300px;
         }
       }
     }
