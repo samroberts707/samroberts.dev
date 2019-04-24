@@ -41,10 +41,10 @@ export default {
     grid-template-columns: 50% 50%;
     width: 100%;
     div.project {
-      position: relative;
+      position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
+      width: 50%;
       height: auto;
       min-height: 100%;
       transition: all 0.5s ease-in-out;
@@ -92,7 +92,6 @@ export default {
         transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
       }
       &.open {
-        position: absolute;
         left: 15%;
         top: 50px;
         width: 70%;
