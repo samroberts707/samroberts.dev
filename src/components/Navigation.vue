@@ -7,7 +7,7 @@
       <ul class="nav-list" :class="{'open': navOpen}">
         <li><a href="#landing" class="nav-link">About Me</a></li>
         <li><a href="#experience" class="nav-link">Timeline</a></li>
-        <li><a href="#web-projects" class="nav-link">Projects</a></li>
+        <li><a href="#" class="nav-link disable">Projects</a></li>
         <li><a href="#" class="nav-link disable">Contact Me</a></li>
       </ul>
       <div class="hamburger" :class="{'open': navOpen}" @click="toggleNav">

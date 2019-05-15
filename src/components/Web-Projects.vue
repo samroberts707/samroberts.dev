@@ -1,7 +1,7 @@
 <template>
   <div id="web-projects">
     <div class="project" :class="{'open': project.opened}" v-for="project in projects" v-bind:key="project.title" :id="project.title">
-      <div class="heading" @click="project.opened = !project.opened">
+      <div class="heading">
         <img :src="project.background" class="project-background"/>
         <div class="heading-overlay">
           <h1>{{ project.title }}</h1>
@@ -20,9 +20,16 @@ export default {
     return {
       projects: [
         {
-          'title': 'Gerald Edelman',
-          'url': 'https://www.geraldedelman.com/',
-          'background': './images/gerald-edelman.jpg',
+          'title': 'Project 1',
+          'url': 'https://google.com',
+          'background': 'https://www.geraldedelman.com/static/images/hero/landing-section.jpg',
+          'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.',
+          'opened': false
+        },
+        {
+          'title': 'Project 2',
+          'url': 'https://google.com',
+          'background': 'https://elementscommunications.com/media/filer_public/1e/ad/1ead472a-f0f5-4ed7-b806-d87c7be0b2e8/header-elements.jpg',
           'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.',
           'opened': false
         }
@@ -42,8 +49,6 @@ export default {
     width: 100%;
     div.project {
       position: absolute;
-      left: 0;
-      top: 0;
       width: 50%;
       height: auto;
       min-height: 100%;
@@ -52,11 +57,6 @@ export default {
         position: relative;
         width: 100%;
         height: 50vw;
-        &:hover {
-          div.heading-overlay {
-            left: 0;
-          }
-        }
         img.project-background {
           width: 100%;
           height: 100%;
@@ -64,12 +64,10 @@ export default {
         }
         div.heading-overlay {
           position: absolute;
-          left: -100%;
           top: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.9);
-          transition: left 0.5s ease-in-out;
+          background-color: rgba(0, 0, 0, 0.75);
           cursor: pointer;
           h1 {
             position: absolute;
@@ -103,6 +101,36 @@ export default {
         div.content {
           padding: 30px;
           max-height: 300px;
+        }
+      }
+      &:first-child {
+        left: 0;
+        top: 0;
+        div.heading {
+          div.heading-overlay {
+            left: -100%;
+            transition: left 0.5s ease-in-out;
+          }
+          &:hover {
+            div.heading-overlay {
+              left: 0;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        right: 0;
+        top: 0;
+        div.heading {
+          div.heading-overlay {
+            right: -100%;
+            transition: right 0.5s ease-in-out;
+          }
+          &:hover {
+            div.heading-overlay {
+              right: 0;
+            }
+          }
         }
       }
     }
