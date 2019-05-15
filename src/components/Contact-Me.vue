@@ -47,5 +47,18 @@ export default {
                 }
             }
         }
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 7vw;
+            }
+            div.social-links {
+                a.social-icon {
+                    i.fab, i.fas {
+                        font-size: 14vw;
+                        margin: 40px;
+                    }
+                }
+            }
+        }
     }
 </style>
