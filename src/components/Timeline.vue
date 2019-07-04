@@ -177,11 +177,11 @@ div#experience {
         width: 100%;
         max-width: 100%;
         &:nth-child(odd) {
-          border-left: 1px solid #000;
+          border-left: 2px solid #5d5d5d;
           border-right: none;
           margin-right: 0;
           text-align: left;
-          transform: translateX(100px);
+          transform: translateY(100px);
           &::before {
             left: 0;
           }
@@ -190,9 +190,10 @@ div#experience {
           }
         }
         &:nth-child(even) {
-          border-left: 1px solid #000;
+          border-left: 2px solid #5d5d5d;
           margin-left: 0;
           text-align: left;
+          transform: translateY(100px);
         }
         div.content-wrapper {
           h2 {

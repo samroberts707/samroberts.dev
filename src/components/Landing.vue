@@ -75,6 +75,7 @@ div#landing {
   }
   div.illustration {
     padding-left: 40px;
+    width: 100%;
     svg {
       width: 100%;
       margin-bottom: 30px;
