@@ -87,8 +87,8 @@ div#experience {
         display: block;
         content: "";
         width: 50%;
-        height: 1px;
-        background-color: #000;
+        height: 2px;
+        background-color: #5d5d5d;
         bottom: 0;
       }
       &::after {
@@ -103,7 +103,7 @@ div#experience {
         border-radius: 50%;
       }
       &:nth-child(odd) {
-        border-right: 1px solid #000;
+        border-right: 2px solid #5d5d5d;
         margin-right: 50%;
         text-align: right;
         transform: translateX(-100px);
@@ -118,7 +118,7 @@ div#experience {
         }
       }
       &:nth-child(even) {
-        border-left: 1px solid #000;
+        border-left: 2px solid #5d5d5d;
         margin-left: 50%;
         text-align: left;
         transform: translateX(100px);
