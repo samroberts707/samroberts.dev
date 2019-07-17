@@ -2,12 +2,13 @@
   <div id="web-projects">
     <div class="project" v-for="project in projects" v-bind:key="project.title" :id="project.title">
       <div class="content">
-        <h2>{{ project.title }}</h2>
-        <h4>{{ project.url }}</h4>
-        <ul>
-          <li v-for="tech in project.technology" v-bind:key="tech">{{tech}}</li>
+        <h2 class="title">{{ project.title }}</h2>
+        <!-- <h4>{{ project.url }}</h4> -->
+        <a class="link" :href="project.url" target="_blank">{{ project.url }}</a>
+        <ul class="technologies">
+          <li class="tech" v-for="tech in project.technology" v-bind:key="tech">{{tech}}</li>
         </ul>
-        <p>{{ project.content }}
+        <p class="text">{{ project.content }}
         </p>
       </div>
       <div class="mockup">
@@ -63,6 +64,52 @@ export default {
       margin-bottom: 50px;
       div.content {
         padding: 30px 30px 30px 0;
+        h2.title {
+          font-size: 2.3vw;
+          margin-bottom: 20px;
+        }
+        a.link {
+          position: relative;
+          font-size: 1.7vw;
+          margin-bottom: 20px;
+          color: #f75d5d;
+          text-decoration: none;
+          &::after {
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f75d5d;
+            content: '';
+            opacity: 0;
+            -webkit-transition: opacity 0.3s, width 0.3s;
+            -moz-transition: opacity 0.3s, width 0.3s;
+            transition: opacity 0.3s, width 0.3s;
+            bottom: 0;
+          }
+          &:hover::after, &:focus::after {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+        ul.technologies {
+          display: block;
+          position: relative;
+          padding: 15px;
+          text-align: center;
+          li.tech {
+            display: inline-block;
+            margin:10px;
+            padding: 9px;
+            background: #f75d5d;
+            border-radius: 5px;
+            color: #FFF;
+          }
+        }
+        p.text {
+          font-size: 1.4vw;
+          line-height: 120%;
+        }
       }
       div.mockup {
         display: block;
