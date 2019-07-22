@@ -8,8 +8,7 @@
         <ul class="technologies">
           <li class="tech" v-for="tech in project.technology" v-bind:key="tech">{{tech}}</li>
         </ul>
-        <p class="text">{{ project.content }}
-        </p>
+        <div class="text" v-html="project.content"></div>
       </div>
       <div class="mockup">
         <img :src="project.mockup" :alt="project.title"/>
@@ -24,24 +23,27 @@ export default {
     return {
       projects: [
         {
-          'title': 'Project 1',
-          'url': 'https://google.com',
-          'mockup': 'https://gm.imgix.net/https%3A%2F%2Foriginalmockups.com%2Fmedia%2Fpages%2Fstock%2Foriginalmockups%2Fdevices%2Fiphone-xs-max-mockup-06%2F1516525845-1562975523%2F08-iphone-xs-max-mockup-06-poster.jpg?auto=format&fit=max&ixlib=php-2.3.0&q=90&w=1440&s=bb418c6188faadeb564b9a746643b63b',
+          'title': 'Gerald Edelman',
+          'url': 'https://www.geraldedelman.com',
+          'mockup': './images/ge.png',
           'technology': [
             'Django',
+            'Nginx',
             'Bootstrap 4'
           ],
-          'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.'
+          // 'content': "Gerald Edelman aren't your typical accounting firm, and they wanted a website which showed that. Our brief was to build them a website that showed they were different from other accounting firms in London, to show their clients they truly cared about their needs and didn't just see them as numbers on a spreadsheet."
+          'content': "<p>I worked on the Gerald Edelman website as a project with NU Creative. I was in charge of developing both the front and backend of the site. As well as managing any servers required for the build.</p><br /><p>The backend is built with Django to give the client complete control over all the content and is tailored to their specific needs.</p><br /><p>The frontend was built with Bootstrap as this allowed us to quickly get up and running with a grid system already in place.</p>"
         },
         {
-          'title': 'Project 2',
-          'url': 'https://google.com',
-          'mockup': 'https://gm.imgix.net/https%3A%2F%2Foriginalmockups.com%2Fmedia%2Fpages%2Fstock%2Foriginalmockups%2Fdevices%2Fiphone-xs-max-mockup-06%2F1516525845-1562975523%2F08-iphone-xs-max-mockup-06-poster.jpg?auto=format&fit=max&ixlib=php-2.3.0&q=90&w=1440&s=bb418c6188faadeb564b9a746643b63b',
+          'title': 'NU Creative',
+          'url': 'https://www.nucreative.co.uk',
+          'mockup': './images/nu-creative.png',
           'technology': [
-            'Django CMS',
-            'Bootstrap 4'
+            'Django',
+            'React',
+            'Nginx'
           ],
-          'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus nisl eget ipsum dapibus scelerisque. Pellentesque sodales sem tincidunt, dictum eros ac, tempus ipsum.'
+          'content': '<p>For this project I was in charge of developing the backend REST API for React to hook up to. In this instance I used DRF (Django Rest Framework) to create endpoints for React to request data from.</p><br /><p>I was also in charge of setting up and configuring the server that the website runs on.</p>'
         }
       ]
     }
@@ -56,12 +58,25 @@ export default {
     display: block;
     width: auto;
     position: relative;
-    padding: 0 10%;
+    padding: 10%;
     div.project {
       position: relative;
       display: grid;
       grid-template-columns: 40% 60%;
-      margin-bottom: 50px;
+      padding-bottom: 10vh;
+      margin-bottom: 10vh;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 70%;
+        left: 15%;
+        bottom: 0vh;
+        height: 2px;
+        background: #5d5d5d;
+      }
+      &:last-child:after {
+        display: none;
+      }
       div.content {
         padding: 30px 30px 30px 0;
         h2.title {
@@ -70,7 +85,7 @@ export default {
         }
         a.link {
           position: relative;
-          font-size: 1.7vw;
+          font-size: 1.5vw;
           margin-bottom: 20px;
           color: #f75d5d;
           text-decoration: none;
@@ -106,7 +121,7 @@ export default {
             color: #FFF;
           }
         }
-        p.text {
+        div.text {
           font-size: 1.4vw;
           line-height: 120%;
         }
@@ -117,6 +132,20 @@ export default {
           display: block;
           width: 100%;
           height: auto;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        div.content {
+          h2.title {
+            font-size: 5vw;
+          }
+          a.link {
+            font-size: 4vw;
+          }
+          div.text {
+            font-size: 3vw;
+          }
         }
       }
     }
