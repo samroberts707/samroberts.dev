@@ -36,7 +36,6 @@ export default {
             'Nginx',
             'Bootstrap 4'
           ],
-          // 'content': "Gerald Edelman aren't your typical accounting firm, and they wanted a website which showed that. Our brief was to build them a website that showed they were different from other accounting firms in London, to show their clients they truly cared about their needs and didn't just see them as numbers on a spreadsheet."
           'content': "<p>I worked on the Gerald Edelman website as a project with NU Creative. I was in charge of developing both the front and backend of the site. As well as managing any servers required for the build.</p><br /><p>The backend is built with Django to give the client complete control over all the content and is tailored to their specific needs.</p><br /><p>The frontend was built with Bootstrap as this allowed us to quickly get up and running with a grid system already in place.</p>"
         },
         {
