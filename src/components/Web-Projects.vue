@@ -11,7 +11,11 @@
         <div class="text" v-html="project.content"></div>
       </div>
       <div class="mockup">
-        <img :src="project.mockup" :alt="project.title"/>
+        <!-- <img :src="project.mockup" :alt="project.title"/> -->
+        <picture>
+          <source media="(min-width: 768px)" v-bind:srcset="project.mockup"/>
+          <img :src="project.mockupMobile" :alt="project.title" />
+        </picture>
       </div>
     </div>
   </div>
@@ -26,6 +30,7 @@ export default {
           'title': 'Gerald Edelman',
           'url': 'https://www.geraldedelman.com',
           'mockup': './images/ge.png',
+          'mockupMobile': './images/ge-mobile.png',
           'technology': [
             'Django',
             'Nginx',
@@ -38,6 +43,7 @@ export default {
           'title': 'NU Creative',
           'url': 'https://www.nucreative.co.uk',
           'mockup': './images/nu-creative.png',
+          'mockupMobile': './images/nu-creative-mobile.png',
           'technology': [
             'Django',
             'React',
