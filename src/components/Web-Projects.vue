@@ -49,6 +49,18 @@ export default {
             'Nginx'
           ],
           'content': '<p>For this project I was in charge of developing the backend REST API for React to hook up to. In this instance I used DRF (Django Rest Framework) to create endpoints for React to request data from.</p><br /><p>I was also in charge of setting up and configuring the server that the website runs on.</p>'
+        },
+        {
+          'title': 'CoderDojo Rise',
+          'url': 'https://coderdojorise.com/',
+          'mockup': './images/cd-rise.png',
+          'mockupMobile': './images/cd-rise-mobile.png',
+          'technology': [
+            'Bootstrap',
+            'SASS',
+            'PHP'
+          ],
+          'content': '<p>I was part of the team that worked on the website for CoderDojo Rise, a London based CoderDojo event run monthly. The events are designed to teach children how to code.<p>We used the site to advertise when next Dojos were being run and to hoopk in to the Eventbrite API so people could book tickets from the site.</p>'
         }
       ]
     }
