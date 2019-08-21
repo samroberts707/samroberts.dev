@@ -8,7 +8,6 @@
         <li><a href="#landing" class="nav-link">About Me</a></li>
         <li><a href="#experience" class="nav-link">Timeline</a></li>
         <li><a href="#web-projects" class="nav-link">Projects</a></li>
-        <li><a href="#blog-list" class="nav-link disable">Blog</a></li>
         <li><a href="#contact-me" class="nav-link">Contact Me</a></li>
       </ul>
       <div class="hamburger" :class="{'open': navOpen}" @click="toggleNav">
