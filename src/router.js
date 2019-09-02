@@ -8,7 +8,7 @@ Vue.use(Router)
 export default new Router({
   saveScrollPosition: false,
   // base: process.env.BASE_URL,
-  // mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
