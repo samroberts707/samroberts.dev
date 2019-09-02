@@ -1,12 +1,5 @@
 <template>
   <div class="section" id="blogs">
-    <div class="blog">
-      <span class="release-date">12/12/2020</span>
-      <h3 class="title">Blog Title</h3>
-      <p
-        class="synopsis"
-      >Synopsis -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis eros non dui molestie pharetra non a turpis. Etiam ac elementum libero, eget elementum quam. Praesent volutpat ex eu ex bibendum, vel condimentum neque blandit. Morbi quis est a augue maximus pellentesque. Curabitur eros lacus, tincidunt nec auctor nec, ornare vel tellus. Donec ut ligula odio.</p>
-    </div>
     <div v-for="blog in blogEntries" :key="blog.id" class="blog">
       <span class="release-date">{{ blog.date }}</span>
       <router-link tag="h3" :to="blog.id" class="title">{{ blog.title }}</router-link>
