@@ -50,7 +50,7 @@ export default {
           'jobTitle': 'BSc Computer Science Degree',
           'linkText': 'University of Greenwich',
           'linkURL': 'https://www.gre.ac.uk/',
-          'startDate': 'Sept 12',
+          'startDate': 'Sep 12',
           'endDate': 'May 15'
         }
       ]
