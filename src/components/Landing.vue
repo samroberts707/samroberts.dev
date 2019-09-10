@@ -68,6 +68,15 @@ export default {
         targets: spinner2,
         rotate: 360
       })
+    var spinner3Animation = this.$anime.timeline({
+      easing: 'linear',
+      loop: true,
+      duration: 1500,
+    })
+    .add({
+      targets: spinner3,
+      rotate: -360,
+    })
   }
 }
 </script>
@@ -145,7 +154,7 @@ div#landing {
         transform-origin: 163px 411px;
       }
       #Spinner3 {
-        transform-origin: 163px 411px;
+        transform-origin: 221px 408px;
       }
       .st0{opacity:0.1;fill:#F75D5D;enable-background:new    ;}
       .st1{opacity:0.1;}
