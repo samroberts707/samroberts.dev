@@ -30,44 +30,44 @@ export default {
       easing: 'linear',
       loop: true
     })
-    .add({
-      targets: [leaf, leafVeins],
-      rotate: 3
-    })
-    .add({
-      targets: [leaf, leafVeins],
-      rotate: -3
-    })
-    .add({
-      targets: [leaf, leafVeins],
-      rotate: 0
-    });
+      .add({
+        targets: [leaf, leafVeins],
+        rotate: 3
+      })
+      .add({
+        targets: [leaf, leafVeins],
+        rotate: -3
+      })
+      .add({
+        targets: [leaf, leafVeins],
+        rotate: 0
+      })
     var spinner1Animation = this.$anime.timeline({
       easing: 'linear',
       loop: true,
-      duration: 2000,
-    }).
-    add({
-      targets: spinner1,
-      rotate: 130,
+      duration: 2000
     })
-    .add({
-      targets: spinner1,
-      rotate: -90,
-    })
-    .add({
-      targets: spinner1,
-      rotate: 0,
-    })
+      .add({
+        targets: spinner1,
+        rotate: 130
+      })
+      .add({
+        targets: spinner1,
+        rotate: -90
+      })
+      .add({
+        targets: spinner1,
+        rotate: 0
+      })
     var spinner2Animation = this.$anime.timeline({
       easing: 'linear',
       loop: true,
       duration: 3000
     })
-    .add({
-      targets: spinner2,
-      rotate: 360,
-    })
+      .add({
+        targets: spinner2,
+        rotate: 360
+      })
   }
 }
 </script>

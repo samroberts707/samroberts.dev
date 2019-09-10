@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import BlogList from "../blogs/blogs.json";
+import BlogList from '../blogs/blogs.json'
 export default {
-  name: "Blogs",
+  name: 'Blogs',
   computed: {
-    blogEntries() {
-      return BlogList;
+    blogEntries () {
+      return BlogList
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
