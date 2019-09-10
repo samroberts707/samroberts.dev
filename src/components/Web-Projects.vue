@@ -60,7 +60,7 @@ export default {
             'SASS',
             'PHP'
           ],
-          'content': '<p>I was part of the team that worked on the website for CoderDojo Rise, a London based CoderDojo event run monthly. The events are designed to teach children how to code.<p>We used the site to advertise when next Dojos were being run and to hoopk in to the Eventbrite API so people could book tickets from the site.</p>'
+          'content': '<p>I was part of the team that worked on the website for CoderDojo Rise, a London based CoderDojo event run monthly. The events are designed to teach children how to code.<p>We used the site to advertise when next Dojos were being run and to hook in to the Eventbrite API so people could book tickets from the site.</p>'
         }
       ]
     }
