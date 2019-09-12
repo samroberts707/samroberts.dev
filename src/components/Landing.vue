@@ -387,72 +387,15 @@ export default {
     const note2 = this.$refs.note2
     const note3 = this.$refs.note3
     const note4 = this.$refs.note4
-    var leafAnimation = this.$anime.timeline({
-      easing: 'linear',
-      loop: true
-    })
-      .add({
-        targets: [leaf, leafVeins],
-        rotate: 3
-      })
-      .add({
-        targets: [leaf, leafVeins],
-        rotate: -3
-      })
-      .add({
-        targets: [leaf, leafVeins],
-        rotate: 0
-      })
-    var spinner1Animation = this.$anime.timeline({
-      easing: 'linear',
-      loop: true,
-      duration: 2000
-    })
-      .add({
-        targets: spinner1,
-        rotate: 130
-      })
-      .add({
-        targets: spinner1,
-        rotate: -90
-      })
-      .add({
-        targets: spinner1,
-        rotate: 0
-      })
-    var spinner2Animation = this.$anime.timeline({
-      easing: 'linear',
-      loop: true,
-      duration: 3000
-    })
-      .add({
-        targets: spinner2,
-        rotate: 360
-      })
-    var spinner3Animation = this.$anime.timeline({
-      easing: 'linear',
-      loop: true,
-      duration: 1500
-    })
-      .add({
-        targets: spinner3,
-        rotate: -360
-      })
-    var headBobAnimation = this.$anime.timeline({
-      easing: 'linear',
-      loop: true,
-      targets: [head, headphones]
-    })
-      .add({
-        translateY: 5,
-        rotateX: 10
-      })
-      .add({
-        translateY: 0,
-        rotateX: 0
-      })
+
     var min = 200
     var max = 600
+
+    var leafAnimation = this.$anime.timeline({easing: 'linear', loop: true,targets: [leaf, leafVeins]}).add({rotate: 3}).add({rotate: -3}).add({rotate: 0})
+    var spinner1Animation = this.$anime.timeline({easing: 'linear', loop: true, duration: 2000, targets: spinner1}).add({rotate: 130}).add({rotate: -90}).add({rotate: 0})
+    var spinner2Animation = this.$anime.timeline({easing: 'linear', loop: true, duration: 3000, targets: spinner2}).add({rotate: 360})
+    var spinner3Animation = this.$anime.timeline({easing: 'linear', loop: true, duration: 1500, targets: spinner3}).add({rotate: -360})
+    var headBobAnimation = this.$anime.timeline({easing: 'linear', loop: true, targets: [head, headphones]}).add({translateY: 5, rotateX: 10}).add({translateY: 0, rotateX: 0})
     var note1Animation = this.$anime.timeline({ easing: 'linear', loop: true, targets: note1, duration: 750 }).add({ translateY: -25, opacity: 1 }, Math.random() * (+max - +min) + +min).add({ translateY: -50, opacity: 0 })
     var note2Animation = this.$anime.timeline({ easing: 'linear', loop: true, targets: note2, duration: 750 }).add({ translateY: -25, opacity: 1 }, Math.random() * (+max - +min) + +min).add({ translateY: -50, opacity: 0 })
     var note3Animation = this.$anime.timeline({ easing: 'linear', loop: true, targets: note3, duration: 750 }).add({ translateY: -25, opacity: 1 }, Math.random() * (+max - +min) + +min).add({ translateY: -50, opacity: 0 })
