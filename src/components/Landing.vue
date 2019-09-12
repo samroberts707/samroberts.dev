@@ -10,8 +10,7 @@
     </transition>
     <transition appear name="fade">
       <div class="illustration">
-        <svg version="1.1" id="Base" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1041.3 554.2" style="enable-background:new 0 0 1041.3 554.2;" xml:space="preserve" ref="svg">
+        <svg version="1.1" id="Base" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1041.3 554.2" style="enable-background:new 0 0 1041.3 554.2;" xml:space="preserve" ref="svg">
         <g id="Background">
           <path class="st0" d="M961.5,438.2c-1.2,2.5-2.3,5-3.5,7.4c-1.8,3.8-3.6,7.5-5.3,11.1c-0.8,1.6-1.6,3.2-2.3,4.8
             c-8.6,17.6-16.6,33.1-23.5,45.9c-12.6,23.6-37.1,38.4-63.8,38.7l-151.6,1.7h-1.6l-13,0.1l-11.1,0.1l-34.1,0.4h-1.4l-17.4,0.2h-0.5
