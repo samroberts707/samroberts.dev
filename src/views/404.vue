@@ -28,7 +28,7 @@ div.wrapper {
     h2 {
       font-size: 2vw;
       text-align: center;
-      color: #f75d5d;
+      color: var(--primary-color);
     }
   }
 }

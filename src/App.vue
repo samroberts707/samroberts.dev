@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" data-theme="">
     <Navigation/>
     <router-view/>
   </div>
@@ -17,10 +17,19 @@ export default {
 <style>
   @import url('./assets/sass/reset.scss');
   @import url('https://fonts.googleapis.com/css?family=Damion|Montserrat');
-  body {
+  div#app {
     font-family: 'Montserrat', sans-serif;
-    color: #333;
+    color: var(--primary-text);
     scroll-behavior: smooth;
     overflow-x: hidden;
+  }
+  div#app {
+    --primary-color: #F75D5D;
+    --secondary-blue: #17BEBB;
+    --primary-text: #333;
+    --soft-grey: #5D5D5D;
+  }
+  div#app[data-theme='blue'] {
+    --primary-color: #17BEBB;
   }
 </style>

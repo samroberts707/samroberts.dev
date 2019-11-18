@@ -104,14 +104,14 @@ export default {
           position: relative;
           font-size: 1.5vw;
           margin-bottom: 20px;
-          color: #f75d5d;
+          color: var(--primary-color);
           text-decoration: none;
           &::after {
             position: absolute;
             left: 0;
             width: 0;
             height: 2px;
-            background: #f75d5d;
+            background: var(--primary-color);
             content: '';
             opacity: 0;
             -webkit-transition: opacity 0.3s, width 0.3s;
@@ -133,7 +133,7 @@ export default {
             display: inline-block;
             margin:10px;
             padding: 9px;
-            background: #f75d5d;
+            background: var(--primary-color);
             border-radius: 5px;
             color: #FFF;
           }

@@ -39,7 +39,7 @@ div#blogs {
       position: relative;
       display: inline-block;
       font-size: 2.3vw;
-      color: #f75d5d;
+      color: var(--primary-color);
       margin-bottom: 20px;
       cursor: pointer;
       &::after {
@@ -47,7 +47,7 @@ div#blogs {
         left: 0;
         width: 0;
         height: 2px;
-        background: #f75d5d;
+        background: var(--primary-color);
         content: "";
         opacity: 0;
         -webkit-transition: opacity 0.3s, width 0.3s;

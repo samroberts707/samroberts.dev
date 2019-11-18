@@ -36,13 +36,13 @@ export default {
                 i.fab, i.fas {
                     font-size: 4.3vw;
                     line-height: 4.4vw;
-                    color: #F75D5D;
+                    color: var(--primary-color);
                     margin: 30px;
-                    transition: color 0.4s ease-in-out;
+                    transition: filter 0.4s ease-in-out;
                 }
                 &:hover {
                     i.fab, i.fas {
-                        color: #D24A4A;
+                        filter: brightness(0.7);
                     }
                 }
             }

@@ -58,11 +58,11 @@ nav#navigation {
       span {
         transition: color 0.3s;
         @media screen and (max-width: 768px) {
-          color: #f75d5d;
+          color: var(--primary-color);
         }
       }
       &:hover span {
-        color: #f75d5d;
+        color: var(--primary-color);
       }
     }
   }
@@ -112,14 +112,14 @@ nav#navigation {
           transition: color 0.3s;
           &.disable {
             text-decoration: line-through;
-            text-decoration-color: #f75d5d;
+            text-decoration-color: var(--primary-color);
           }
           &::before, &::after {
             position: absolute;
             left: 0;
             width: 100%;
             height: 2px;
-            background: #f75d5d;
+            background: var(--primary-color);
             content: '';
             opacity: 0;
             -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -142,7 +142,7 @@ nav#navigation {
             transform: translateY(10px);
           }
           &:hover, &:focus {
-            color: #f75d5d;
+            color: var(--primary-color);
           }
           &:hover::before, &:focus::before, &:hover::after, &:focus::after {
             opacity: 1;

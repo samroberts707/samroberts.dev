@@ -99,7 +99,7 @@ div#experience {
         bottom: -10px;
         width: 20px;
         height: 20px;
-        background-color: #f75d5d;
+        background-color: var(--primary-color);
         border-radius: 50%;
       }
       &:nth-child(odd) {
@@ -140,14 +140,14 @@ div#experience {
           margin-bottom: 20px;
           a {
             position: relative;
-            color: #f75d5d;
+            color: var(--primary-color);
             text-decoration: none;
             &::after {
               position: absolute;
               left: 0;
               width: 0;
               height: 2px;
-              background: #f75d5d;
+              background: var(--primary-color);
               content: '';
               opacity: 0;
               -webkit-transition: opacity 0.3s, width 0.3s;
