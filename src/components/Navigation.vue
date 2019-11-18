@@ -4,13 +4,19 @@
       <h1>&#60;<span>SR</span>&#47;&#62;</h1>
     </div>
     <div class="menu">
-      <ul class="nav-list" :class="{'open': navOpen}">
-        <li><a href="/#landing" class="nav-link">About Me</a></li>
-        <li><a href="/#experience" class="nav-link">Timeline</a></li>
-        <li><a href="/#web-projects" class="nav-link">Projects</a></li>
-        <li><a href="/#blogs" class="nav-link disable">Blog</a></li>
-        <li><a href="/#contact-me" class="nav-link">Contact Me</a></li>
-      </ul>
+      <div class="nav-wrapper" :class="{'open': navOpen}">
+        <ul class="nav-list">
+          <li><a href="/#landing" class="nav-link">About Me</a></li>
+          <li><a href="/#experience" class="nav-link">Timeline</a></li>
+          <li><a href="/#web-projects" class="nav-link">Projects</a></li>
+          <li><a href="/#blogs" class="nav-link disable">Blog</a></li>
+          <li><a href="/#contact-me" class="nav-link">Contact Me</a></li>
+        </ul>
+        <!-- <select>
+          <option>Red Theme</option>
+          <option>Blue Theme</option>
+        </select> -->
+      </div>
       <div class="hamburger" :class="{'open': navOpen}" @click="toggleNav">
         <div class="bar one"></div>
         <div class="bar two"></div>
@@ -100,55 +106,57 @@ nav#navigation {
         }
       }
     }
-    ul.nav-list {
-      li {
-        display: inline-block;
-        a {
-          position: relative;
-          font-family: 'Montserrat', sans-serif;
-          text-decoration: none;
-          padding: 7px;
-          color: #787878;
-          transition: color 0.3s;
-          &.disable {
-            text-decoration: line-through;
-            text-decoration-color: var(--primary-color);
-          }
-          &::before, &::after {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary-color);
-            content: '';
-            opacity: 0;
-            -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-            -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-            transition: opacity 0.3s, transform 0.3s;
-            -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px);
-          }
-          &::before {
-            top: 0;
-            -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px);
-          }
-          &::after {
-            bottom: 0;
-            -webkit-transform: translateY(10px);
-            -moz-transform: translateY(10px);
-            transform: translateY(10px);
-          }
-          &:hover, &:focus {
-            color: var(--primary-color);
-          }
-          &:hover::before, &:focus::before, &:hover::after, &:focus::after {
-            opacity: 1;
-            -webkit-transform: translateY(0px);
-            -moz-transform: translateY(0px);
-            transform: translateY(0px);
+    div.nav-wrapper {
+      ul.nav-list {
+        li {
+          display: inline-block;
+          a {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            padding: 7px;
+            color: #787878;
+            transition: color 0.3s;
+            &.disable {
+              text-decoration: line-through;
+              text-decoration-color: var(--primary-color);
+            }
+            &::before, &::after {
+              position: absolute;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background: var(--primary-color);
+              content: '';
+              opacity: 0;
+              -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+              -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+              transition: opacity 0.3s, transform 0.3s;
+              -webkit-transform: translateY(-10px);
+              -moz-transform: translateY(-10px);
+              transform: translateY(-10px);
+            }
+            &::before {
+              top: 0;
+              -webkit-transform: translateY(-10px);
+              -moz-transform: translateY(-10px);
+              transform: translateY(-10px);
+            }
+            &::after {
+              bottom: 0;
+              -webkit-transform: translateY(10px);
+              -moz-transform: translateY(10px);
+              transform: translateY(10px);
+            }
+            &:hover, &:focus {
+              color: var(--primary-color);
+            }
+            &:hover::before, &:focus::before, &:hover::after, &:focus::after {
+              opacity: 1;
+              -webkit-transform: translateY(0px);
+              -moz-transform: translateY(0px);
+              transform: translateY(0px);
+            }
           }
         }
       }
@@ -162,9 +170,11 @@ nav#navigation {
         &.open {
           top: 80px;
         }
-        li {
-          display: block;
-          margin: 20px 0;
+        ul.nav-list {
+          li {
+            display: block;
+            margin: 20px 0;
+          }
         }
       }
     }
