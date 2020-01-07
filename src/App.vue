@@ -16,12 +16,13 @@ export default {
 
 <style>
   @import url('./assets/sass/reset.scss');
-  @import url('https://fonts.googleapis.com/css?family=Damion|Montserrat');
+  @import url('https://fonts.googleapis.com/css?family=Damion|Montserrat&display=swap');
   div#app {
     font-family: 'Montserrat', sans-serif;
     color: var(--primary-text);
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-display: swap;
   }
   div#app {
     --primary-color: #F75D5D;
