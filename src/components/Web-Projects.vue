@@ -29,8 +29,8 @@ export default {
         {
           'title': 'Gerald Edelman',
           'url': 'https://www.geraldedelman.com',
-          'mockup': './images/ge.png',
-          'mockupMobile': './images/ge-mobile.png',
+          'mockup': './images/ge-webp.webp',
+          'mockupMobile': './images/ge-mobile-webp.webp',
           'technology': [
             'Django',
             'Nginx',
