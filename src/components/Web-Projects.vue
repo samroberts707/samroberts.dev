@@ -4,7 +4,7 @@
       <div class="content">
         <h2 class="title">{{ project.title }}</h2>
         <!-- <h4>{{ project.url }}</h4> -->
-        <a class="link" :href="project.url" target="_blank">{{ project.url }}</a>
+        <a class="link" :href="project.url" target="_blank" rel="noreferrer">{{ project.url }}</a>
         <ul class="technologies">
           <li class="tech" v-for="tech in project.technology" v-bind:key="tech">{{tech}}</li>
         </ul>
