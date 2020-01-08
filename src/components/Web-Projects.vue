@@ -13,8 +13,11 @@
       <div class="mockup">
         <!-- <img :src="project.mockup" :alt="project.title"/> -->
         <picture>
-          <source media="(min-width: 768px)" v-bind:srcset="project.mockup"/>
-          <img :src="project.mockupMobile" :alt="project.title" />
+          <source media="(min-width: 768px)" v-bind:srcset="project.mockupWebP" type="image/webp"/>
+          <source media="(min-width: 768px)" v-bind:srcset="project.mockup" type="image/png"/>
+          <source media="(max-width: 768px)" v-bind:srcset="project.mockupMobileWebP" type="image/webp" />
+          <source media="(max-width: 768px)" v-bind:srcset="project.mockupMobile" type="image/png" />
+          <img :src="project.mockup" :alt="project.title" type="image/png" />
         </picture>
       </div>
     </div>
@@ -29,8 +32,10 @@ export default {
         {
           'title': 'Gerald Edelman',
           'url': 'https://www.geraldedelman.com',
-          'mockup': './images/ge-webp.webp',
-          'mockupMobile': './images/ge-mobile-webp.webp',
+          'mockup': './images/ge.png',
+          'mockupWebP': './images/ge.webp',
+          'mockupMobile': './images/ge-mobile.png',
+          'mockupMobileWebP': './images/ge-mobile.webp',
           'technology': [
             'Django',
             'Nginx',
@@ -42,7 +47,9 @@ export default {
           'title': 'NU Creative',
           'url': 'https://www.nucreative.co.uk',
           'mockup': './images/nu-creative.png',
+          'mockupWebP': './images/nu-creative.webp',
           'mockupMobile': './images/nu-creative-mobile.png',
+          'mockupMobileWebP': './images/nu-creative-mobile.webp',
           'technology': [
             'Django',
             'React',
@@ -54,7 +61,9 @@ export default {
           'title': 'CoderDojo Rise',
           'url': 'https://coderdojorise.com/',
           'mockup': './images/cd-rise.png',
+          'mockupWebP': './images/cd-rise.webp',
           'mockupMobile': './images/cd-rise-mobile.png',
+          'mockupMobileWebP': './images/cd-rise-mobile.webp',
           'technology': [
             'Bootstrap',
             'SASS',
