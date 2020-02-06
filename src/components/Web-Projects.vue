@@ -30,6 +30,22 @@ export default {
     return {
       projects: [
         {
+          'title': 'Piiq',
+          'url': 'https://piiqrp.com',
+          'mockup': './images/piiq.png',
+          'mockupWebP': './images/piiq.webp',
+          'mockupMobile': './images/piiq-mobile.png',
+          'mockupMobileWebP': './images/piiq-mobile.webp',
+          'technology': [
+            'Craft CMS',
+            'CSS Grid',
+            'SASS',
+            'PHP',
+            'Apache'
+          ],
+          'content': '<p>Piiq is a aviation insurance firm that was a work project for NU Creative. This is the first public project we have done using Craft CMS, our new solution alternative to Wordpress for brochure sites. I was in charge of the complete build process, I took this opportunity to really hone my skills with CSS Grid and the entire site is built using it. I used a JS library to detect when elements entered the viewport and then animated them with pure CSS. This site was also entered for the AVA Awards to which it won gold.</p>'
+        },
+        {
           'title': 'Gerald Edelman',
           'url': 'https://www.geraldedelman.com',
           'mockup': './images/ge.png',
