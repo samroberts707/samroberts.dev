@@ -78,30 +78,44 @@ nav#navigation {
       display: none;
       z-index: 2;
       cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      &:focus {
+        outline: none;
+      }
       div.bar {
         width: 25px;
         height: 2px;
         background: #4E4E4E;
         margin: 7px 0;
         transition: transform 0.3s ease-in-out;
+        &.one {
+          width: 12px;
+        }
         &.two {
-          width: 20px;
-          margin-left: 5px;
-          opacity: 1;
-          transition: opacity 0.3s ease-in-out;
+          width: 25px;
+        }
+        &.three {
+          width: 12px;
+          margin-left: 13px;
         }
       }
       @media screen and (max-width: 768px) {
         display: block;
         &.open {
           div.bar.one {
-            transform: rotate(-45deg) translate(-8px, 7px);
+            transform: rotate(-135deg) translate(-4px, 0px);
           }
           div.bar.two {
-            opacity: 0;
+            opacity: 1;
+            transform: rotate(-45deg) translate(2px, 0px);
           }
           div.bar.three {
-            transform: rotate(45deg) translate(-5px, -5px);
+            transform: rotate(-135deg) translate(4px, 4px);
           }
         }
       }
