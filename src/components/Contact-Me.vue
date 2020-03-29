@@ -66,6 +66,8 @@ export default {
                 font-size: 7vw;
             }
             div.social-links {
+                grid-template-columns: 60px 60px;
+                row-gap: 50px;
                 a.social-icon {
                 }
             }
