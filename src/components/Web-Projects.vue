@@ -3,39 +3,56 @@
     <div class="project" v-for="project in projects" v-bind:key="project.title" :id="project.title">
       <div class="content">
         <h2 class="title">{{ project.title }}</h2>
-        <!-- <h4>{{ project.url }}</h4> -->
         <a class="link" :href="project.url" target="_blank" rel="noreferrer">{{ project.url }}</a>
         <ul class="technologies">
           <li class="tech" v-for="tech in project.technology" v-bind:key="tech">{{tech}}</li>
         </ul>
         <div class="text" v-html="project.content"></div>
       </div>
-      <div class="mockup">
-        <!-- <img :src="project.mockup" :alt="project.title"/> -->
-        <picture>
-          <source media="(min-width: 768px)" v-bind:srcset="project.mockupWebP" type="image/webp"/>
-          <source media="(min-width: 768px)" v-bind:srcset="project.mockup" type="image/png"/>
-          <source media="(max-width: 768px)" v-bind:srcset="project.mockupMobileWebP" type="image/webp" />
-          <source media="(max-width: 768px)" v-bind:srcset="project.mockupMobile" type="image/png" />
-          <img :src="project.mockup" :alt="project.title" type="image/png" />
-        </picture>
-      </div>
+      <div :class="project.slug + '-mockup mockup'" @mouseover="mouseOverAnim(project.slug)" @mouseleave="mouseLeaveAnim(project.slug, project.mockupAngle)"></div>
     </div>
   </div>
 </template>
-
 <script>
+import Deviceful from 'deviceful'
+let device = []
+const mouseOverAnimSettings = [
+  {
+    object: 'model',
+    move: 'rotation',
+    axis: 'y',
+    to: 0,
+    duration: 600,
+    easing: 'swingTo'
+  }
+]
 export default {
+  mounted: function () {
+    Object.keys(this.$data.projects).forEach(key => {
+      let val = this.$data.projects[key]
+      device[val.slug] = new Deviceful({
+        parent: '.' + val.slug + '-mockup',
+        device: 'laptop',
+        screenshot: '/images/' + val.slug + '-full-desktop.png',
+        screenshotHeight: val.mockupHeight,
+        cameraDistance: 32,
+        initialDeviceRotation: val.mockupAngle,
+        path: '/deviceful/',
+        autoHeight: true
+      })
+      device[val.slug].imageSmoothingEnabled = false
+      device[val.slug].mount()
+    })
+  },
   data: function () {
     return {
       projects: [
         {
           'title': 'Piiq',
+          'slug': 'piiq',
           'url': 'https://piiqrp.com',
-          'mockup': './images/piiq.png',
-          'mockupWebP': './images/piiq.webp',
-          'mockupMobile': './images/piiq-mobile.png',
-          'mockupMobileWebP': './images/piiq-mobile.webp',
+          'mockupHeight': 10720,
+          'mockupAngle': -30,
           'technology': [
             'Craft CMS',
             'CSS Grid',
@@ -47,11 +64,10 @@ export default {
         },
         {
           'title': 'Gerald Edelman',
+          'slug': 'gerald-edelman',
           'url': 'https://www.geraldedelman.com',
-          'mockup': './images/ge.png',
-          'mockupWebP': './images/ge.webp',
-          'mockupMobile': './images/ge-mobile.png',
-          'mockupMobileWebP': './images/ge-mobile.webp',
+          'mockupHeight': 6380,
+          'mockupAngle': 30,
           'technology': [
             'Django',
             'Nginx',
@@ -61,11 +77,10 @@ export default {
         },
         {
           'title': 'NU Creative',
+          'slug': 'nu-creative',
           'url': 'https://www.nucreative.co.uk',
-          'mockup': './images/nu-creative.png',
-          'mockupWebP': './images/nu-creative.webp',
-          'mockupMobile': './images/nu-creative-mobile.png',
-          'mockupMobileWebP': './images/nu-creative-mobile.webp',
+          'mockupHeight': 4540,
+          'mockupAngle': -30,
           'technology': [
             'Django',
             'React',
@@ -75,11 +90,10 @@ export default {
         },
         {
           'title': 'CoderDojo Rise',
+          'slug': 'coderdojo-rise',
           'url': 'https://coderdojorise.com/',
-          'mockup': './images/cd-rise.png',
-          'mockupWebP': './images/cd-rise.webp',
-          'mockupMobile': './images/cd-rise-mobile.png',
-          'mockupMobileWebP': './images/cd-rise-mobile.webp',
+          'mockupHeight': 2300,
+          'mockupAngle': 30,
           'technology': [
             'Bootstrap',
             'SASS',
@@ -91,6 +105,26 @@ export default {
     }
   },
   methods: {
+    mouseOverAnim: function (elem) {
+      device[elem].animate(mouseOverAnimSettings)
+      device[elem].scroll({
+        direction: 'down', // 'up' or 'down'
+        duration: 10000, // in milliseconds
+        easing: 'easeInOutCubic'
+      })
+    },
+    mouseLeaveAnim: function (elem, angle) {
+      device[elem].swivel({
+        to: angle,
+        duration: 600,
+        easing: 'swingTo'
+      })
+      device[elem].scroll({
+        direction: 'up', // 'up' or 'down'
+        duration: 700, // in milliseconds
+        easing: 'easeInOutCubic'
+      })
+    }
   }
 }
 </script>
@@ -170,9 +204,12 @@ export default {
       }
       div.mockup {
         display: block;
-        img {
-          display: block;
-          width: 100%;
+        width: 100%;
+        height: 600px;
+        align-self: center;
+        canvas {
+          position: relative;
+          z-index: 20;
           height: auto;
         }
       }

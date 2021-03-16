@@ -4,3 +4,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/04dab4ba-a433-4247-b6a7-650a455d7f42/deploy-status)](https://app.netlify.com/sites/samroberts/deploys)
 
 This is my personal website built using VueJS
+
+
+## Notes
+### Deviceful
+Deviceful laptop resolution should be 1440px wide by ~900px tall
