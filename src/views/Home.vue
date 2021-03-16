@@ -3,7 +3,6 @@
   <Landing></Landing>
   <Timeline></Timeline>
   <WebProjects></WebProjects>
-  <!-- <Blogs></Blogs> -->
   <ContactMe></ContactMe>
 </div>
 </template>
@@ -12,7 +11,6 @@
 import Landing from '../components/Landing.vue'
 import Timeline from '../components/Timeline.vue'
 import WebProjects from '../components/Web-Projects.vue'
-// import Blogs from '../components/Blogs.vue'
 import ContactMe from '../components/Contact-Me.vue'
 
 export default {
@@ -21,7 +19,6 @@ export default {
     Landing,
     Timeline,
     WebProjects,
-    // Blogs,
     ContactMe
   }
 }
