@@ -1,11 +1,29 @@
-# Sam's Personal Website
+# Nuxt 3 Minimal Starter
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d3a2cfc63f15473e854373679151cd88)](https://app.codacy.com/app/samroberts707/Personal-Website?utm_source=github.com&utm_medium=referral&utm_content=samroberts707/Personal-Website&utm_campaign=Badge_Grade_Dashboard)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/04dab4ba-a433-4247-b6a7-650a455d7f42/deploy-status)](https://app.netlify.com/sites/samroberts/deploys)
+We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
-This is my personal website built using VueJS
+## Setup
 
+Make sure to install the dependencies
 
-## Notes
-### Deviceful
-Deviceful laptop resolution should be 1440px wide by ~900px tall
+```bash
+yarn install
+```
+
+## Development
+
+Start the development server on http://localhost:3000
+
+```bash
+yarn dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+yarn build
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
