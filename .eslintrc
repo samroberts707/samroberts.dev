@@ -3,7 +3,7 @@
         "@nuxtjs"
     ],
     "vue/multi-word-component-names": ["error", {
-        "ignores": ['Navigation','Footer','default']
+        "ignores": ['Navigation','Footer']
       }]
 }
   

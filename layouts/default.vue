@@ -1,18 +1,22 @@
 <template>
   <div class="__layout">
+    <MouseFollow />
     <Navigation />
     <Nuxt />
     <Footer />
   </div>
 </template>
 <script>
+import MouseFollow from '../components/MouseFollow.vue'
 import Navigation from '../components/Navigation.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
+  name: 'DefaultLayout',
   components: {
     Navigation,
-    Footer
+    Footer,
+    MouseFollow
   }
 }
 </script>
@@ -22,7 +26,13 @@ export default {
 
   * {
     font-family: 'Comfortaa', sans-serif;
-    font-display: 'swap';
     font-weight: 300;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    cursor: none;
   }
 </style>
