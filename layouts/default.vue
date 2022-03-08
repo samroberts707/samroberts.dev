@@ -29,6 +29,8 @@ export default {
     font-weight: 300;
     font-size: inherit;
     line-height: inherit;
+    cursor: none;
+    color: #3a3a3a;
   }
 
   html {
