@@ -28,23 +28,11 @@ export default {
       this.y = ev.clientY
     },
     onMouseEnter (ev) {
-      // TODO: There must a better way of doing this!!!
-      if (
-        ev.path[0].className === 'hamburger' ||
-        ev.path[0].className === 'hamburger active' ||
-        ev.path[1].className === 'hamburger' ||
-        ev.path[1].className === 'hamburger active' ||
-        ev.path[0].className === 'navbar' ||
-        ev.target.nodeName === 'A' ||
-        ev.path[0].className === 'social twitter' ||
-        ev.path[0].className === 'social linkedin' ||
-        ev.path[0].className === 'social github'
-      ) {
+      if (ev.target.hasAttribute('mouseexpand')) {
         this.mouseExpand = true
       } else {
         this.mouseExpand = false
       }
-      console.log(ev)
     }
   }
 }
