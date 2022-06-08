@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "core-js": "^3.19.3",
+    "gsap": "^3.10.4",
+    "mouse-follower": "^1.1.2",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",

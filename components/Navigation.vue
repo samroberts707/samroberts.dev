@@ -1,27 +1,27 @@
 <template>
   <nav>
     <div class="navbar">
-      <div class="hamburger" :class="{ active: isOpen }" @click="toggleNav" mouseExpand>
-        <span mouseExpand />
-        <span mouseExpand />
-        <span mouseExpand />
+      <div class="hamburger" :class="{ active: isOpen }" @click="toggleNav" data-cursor-text="Toggle">
+        <span />
+        <span />
+        <span />
       </div>
     </div>
     <div class="nav-menu" :class="{ active: isOpen }">
       <div class="content">
         <span>Menu</span>
-        <nuxt-link to="/" mouseExpand>About</nuxt-link>
-        <nuxt-link to="/" mouseExpand>Work</nuxt-link>
-        <nuxt-link to="/" mouseExpand>Blog</nuxt-link>
-        <nuxt-link to="/" mouseExpand>Contact</nuxt-link>
+        <nuxt-link to="/" data-cursor="-lg">About</nuxt-link>
+        <nuxt-link to="/" data-cursor="-lg">Work</nuxt-link>
+        <nuxt-link to="/" data-cursor="-lg">Blog</nuxt-link>
+        <nuxt-link to="/" data-cursor="-lg">Contact</nuxt-link>
       </div>
       <div class="quick-contact">
         <span>Get in touch</span>
         <!-- <a href="mailto:samroberts707@gmail.com">samroberts707@gmail.com</a> TODO: SHOULD I KEEP EMAIL? -->
         <div class="socials">
-          <a href="https://twitter.com/samroberts707" target="_blank"><img class="social twitter" src="~/assets/icons/twitter_icon.png" alt="Twitter" mouseExpand /></a>
-          <a href="https://www.linkedin.com/in/samroberts707/" target="_blank"><img class="social linkedin" src="~/assets/icons/linkedin_icon.png" alt="Twitter" mouseExpand /></a>
-          <a href="https://github.com/samroberts707" target="_blank"><img class="social github" src="~/assets/icons/github_icon.png" alt="Twitter" mouseExpand /></a>
+          <a href="https://twitter.com/samroberts707" target="_blank"><img class="social twitter" src="~/assets/icons/twitter_icon.png" alt="Twitter" data-cursor="-lg" /></a>
+          <a href="https://www.linkedin.com/in/samroberts707/" target="_blank"><img class="social linkedin" src="~/assets/icons/linkedin_icon.png" alt="Twitter" data-cursor="-lg" /></a>
+          <a href="https://github.com/samroberts707" target="_blank"><img class="social github" src="~/assets/icons/github_icon.png" alt="Twitter" data-cursor="-lg" /></a>
         </div>
       </div>
     </div>
