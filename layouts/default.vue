@@ -33,7 +33,9 @@ export default {
   @import "https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css";
   // NU CSS Grid from https://github.com/nu-creative/css-grid/blob/master/dist/nu-grid.min.css
   .container{display:block;width:100%;margin-left:auto;margin-right:auto}@media screen and (min-width:576px){.container{max-width:540px;padding-left:16px;padding-right:16px}}@media screen and (min-width:768px){.container{max-width:720px}}@media screen and (min-width:990px){.container{max-width:960px}}@media screen and (min-width:1400px){.container{max-width:1366px}}
-
+  :root {
+    --primary-color: #80d8ff;
+  }
   * {
     font-family: 'Comfortaa', sans-serif;
     font-weight: 300;
