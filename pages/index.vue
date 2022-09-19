@@ -15,7 +15,7 @@
             v-bind:style="{'z-index': experience.length - index}">
             <div class="content-wrapper">
               <h2>{{ item.jobTitle }}</h2>
-              <h4><a :href="item.linkURL" target="_blank" rel="noreferrer">{{ item.linkText }}</a></h4>
+              <h4><a :href="item.linkURL" target="_blank" rel="noreferrer" data-cursor-text="Link">{{ item.linkText }}</a></h4>
               <h4>{{ item.startDate }} - {{ item.endDate }}</h4>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default {
         {
           jobTitle: 'Systems and Database Manager',
           linkText: 'Noord Group',
-          linkURL: 'https://www.noordgroup.co.uk',
+          linkURL: 'https://www.noord-dialogue.com/',
           startDate: 'Jun 15',
           endDate: 'Oct 15'
         },
@@ -162,23 +162,6 @@ export default {
                 position: relative;
                 color: var(--primary-color);
                 text-decoration: none;
-                &::after {
-                  position: absolute;
-                  left: 0;
-                  width: 0;
-                  height: 2px;
-                  background: var(--primary-color);
-                  content: '';
-                  opacity: 0;
-                  -webkit-transition: opacity 0.3s, width 0.3s;
-                  -moz-transition: opacity 0.3s, width 0.3s;
-                  transition: opacity 0.3s, width 0.3s;
-                  bottom: 0;
-                }
-                &:hover::after, &:focus::after {
-                  opacity: 1;
-                  width: 100%;
-                }
               }
             }
           }
