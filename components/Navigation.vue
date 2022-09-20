@@ -10,9 +10,9 @@
     <div class="nav-menu" :class="{ active: isOpen }">
       <div class="content">
         <span>Menu</span>
-        <nuxt-link to="/" data-cursor="-lg">About</nuxt-link>
-        <nuxt-link to="/" data-cursor="-lg">Work</nuxt-link>
-        <nuxt-link to="/" data-cursor="-lg">Blog</nuxt-link>
+        <nuxt-link to="#timeline" data-cursor="-lg">About</nuxt-link>
+        <nuxt-link to="" data-cursor="-lg">Work</nuxt-link>
+        <a data-cursor-text="Coming Soon">Blog</a>
         <nuxt-link to="/" data-cursor="-lg">Contact</nuxt-link>
       </div>
       <div class="quick-contact">

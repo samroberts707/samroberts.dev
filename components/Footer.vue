@@ -1,17 +1,22 @@
 <template>
   <footer>
-    <h1>Footer</h1>
+    <p>&copy; Copyright Sam Roberts</p>
   </footer>
 </template>
 <script>
 export default {
+  name: 'FooterComp'
 }
 </script>
 <style lang="scss" scoped>
   footer {
     display: block;
     position: relative;
-    background-color: lightblue;
-    padding: 100px 0;
+    padding: 30px 0;
+    p {
+      display: block;
+      text-align: center;
+      color: #878787;
+    }
   }
 </style>
