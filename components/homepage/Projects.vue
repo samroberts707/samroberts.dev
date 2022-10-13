@@ -85,5 +85,25 @@ div#web-projects {
         font-family: 'Poppins', sans-serif;
       }
     }
+  @media screen and (max-width: 1300px) {
+    .project {
+      h2 {
+        font-size: 80px;
+        line-height: 90px;
+      }
+    }
+  }
+  @media screen and (max-width: 990px) {
+    grid-template-columns: 1fr;
+    .project {
+      width: calc(100% - 60px);
+      padding: 30px;
+      height: 75vw;
+      h2 {
+        font-size: 60px;
+        line-height: 72px;
+      }
+    }
+  }
 }
 </style>
