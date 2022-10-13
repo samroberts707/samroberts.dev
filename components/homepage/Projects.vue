@@ -117,8 +117,8 @@ div#web-projects {
         display: block;
         position: relative;
         z-index: 2;
-        font-size: 120px;
-        line-height: 140px;
+        font-size: 84px;
+        line-height: 99px;
         font-weight: 500;
         color: #FFFFFF;
         text-align: center;
