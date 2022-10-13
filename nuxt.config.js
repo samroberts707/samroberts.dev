@@ -48,17 +48,16 @@ export default {
       cssProcessorPluginOptions: {
         preset: ['default', { minifyFontValues: { removeQuotes: false } }]
       }
-    },
+    }
   },
 
   // Google Fonts
   googleFonts: {
     families: {
       Comfortaa: {
-        wght: [300, 400, 500, 600, 700],
-      },
+        wght: [300, 400, 500, 600, 700]
+      }
     }
   }
 
 }
-
