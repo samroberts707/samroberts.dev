@@ -56,6 +56,9 @@ export default {
     families: {
       Comfortaa: {
         wght: [300, 400, 500, 600, 700]
+      },
+      Poppins: {
+        wght: [300, 400, 500, 600, 700]
       }
     }
   }
