@@ -13,11 +13,11 @@
         <nuxt-link to="#timeline" data-cursor="-lg">
           About
         </nuxt-link>
-        <nuxt-link to="" data-cursor="-lg">
+        <nuxt-link to="#web-projects" data-cursor="-lg">
           Work
         </nuxt-link>
         <a data-cursor-text="Coming Soon">Blog</a>
-        <nuxt-link to="/" data-cursor="-lg">
+        <nuxt-link to="#contact-me" data-cursor="-lg">
           Contact
         </nuxt-link>
       </div>
