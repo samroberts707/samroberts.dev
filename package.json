@@ -12,14 +12,14 @@
     "lintfix": "yarn lint:js --fix"
   },
   "dependencies": {
-    "core-js": "^3.19.3",
+    "core-js": "^3.25.3",
     "gsap": "^3.10.4",
     "mouse-follower": "^1.1.2",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.8",
-    "vue": "^2.6.14",
-    "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
@@ -30,7 +30,7 @@
     "eslint": "^8.4.1",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
-    "sass": "^1.49.9",
-    "sass-loader": "^10"
+    "sass": "^1.55.0",
+    "sass-loader": "10"
   }
 }
