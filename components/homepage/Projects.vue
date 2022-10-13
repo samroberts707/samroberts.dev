@@ -91,17 +91,23 @@ export default {
 div#web-projects {
     display: grid;
     position: relative;
-    width: 100%;
+    width: calc(100% - 20%);
     grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    padding: 0 10% 50px 10%;
     .project {
       display: flex;
       position: relative;
       width: calc(100% - 100px);
-      height: 50vw;
+      height: 30vw;
       align-items: center;
       justify-content: center;
       text-decoration: none;
       padding: 50px;
+      transition: transform .3s ease;
+      &:nth-child(even) {
+        transform: translateY(50px);
+      }
       img.project-background {
         position: absolute;
         display: block;
@@ -117,8 +123,8 @@ div#web-projects {
         display: block;
         position: relative;
         z-index: 2;
-        font-size: 84px;
-        line-height: 99px;
+        font-size: 50px;
+        line-height: 60px;
         font-weight: 500;
         color: #FFFFFF;
         text-align: center;
@@ -128,20 +134,25 @@ div#web-projects {
   @media screen and (max-width: 1300px) {
     .project {
       h2 {
-        font-size: 80px;
-        line-height: 90px;
+        font-size: 40px;
+        line-height: 55px;
       }
     }
   }
   @media screen and (max-width: 990px) {
     grid-template-columns: 1fr;
+    padding: 0 3px 50px 3px;
+    width: calc(100% - 6px);
     .project {
       width: calc(100% - 60px);
       padding: 30px;
       height: 75vw;
+      &:nth-child(even) {
+        transform: translateY(0);
+      }
       h2 {
-        font-size: 60px;
-        line-height: 72px;
+        font-size: 40px;
+        line-height: 55px;
       }
     }
   }
