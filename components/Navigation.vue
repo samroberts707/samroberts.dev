@@ -122,7 +122,7 @@ export default {
           font-size: 56px;
           line-height: 64px;
           text-decoration: none;
-          margin: 0 0 10px 0;
+          margin: 0 0 10px;
         }
       }
       div.quick-contact {

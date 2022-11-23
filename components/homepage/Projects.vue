@@ -94,7 +94,7 @@ div#web-projects {
     width: calc(100% - 20%);
     grid-template-columns: 1fr 1fr;
     gap: 3px;
-    padding: 0 10% 50px 10%;
+    padding: 0 10% 50px;
     .project {
       display: flex;
       position: relative;
@@ -141,7 +141,7 @@ div#web-projects {
   }
   @media screen and (max-width: 990px) {
     grid-template-columns: 1fr;
-    padding: 0 3px 50px 3px;
+    padding: 0 3px 50px;
     width: calc(100% - 6px);
     .project {
       width: calc(100% - 60px);
