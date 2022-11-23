@@ -1,5 +1,6 @@
 # samroberts.dev
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/04dab4ba-a433-4247-b6a7-650a455d7f42/deploy-status)](https://app.netlify.com/sites/samroberts/deploys)
 [![CodeFactor](https://www.codefactor.io/repository/github/samroberts707/samroberts.dev/badge)](https://www.codefactor.io/repository/github/samroberts707/samroberts.dev)
 
 ## Build Setup
