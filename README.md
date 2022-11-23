@@ -1,5 +1,7 @@
 # samroberts.dev
 
+[![CodeFactor](https://www.codefactor.io/repository/github/samroberts707/samroberts.dev/badge)](https://www.codefactor.io/repository/github/samroberts707/samroberts.dev)
+
 ## Build Setup
 
 ```bash
