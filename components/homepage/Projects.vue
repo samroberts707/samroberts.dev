@@ -41,12 +41,6 @@ export default {
           url: 'https://xeniabroking.com'
         },
         {
-          title: 'Wellbeing of Women',
-          slug: 'wellbeing-of-women',
-          img: 'wellbeing-of-women.jpg',
-          url: 'https://wellbeingofwomen.org.uk'
-        },
-        {
           title: 'Dugdale Centre',
           slug: 'dugdale',
           img: 'dugdale.jpg',
