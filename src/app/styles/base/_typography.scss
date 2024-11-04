@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Red Hat Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--oxford-blue);
+}
+
+p, li {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--oxford-blue);
+}
+
+a {
+    font-size: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 3rem;
+}
