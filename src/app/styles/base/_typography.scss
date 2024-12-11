@@ -50,7 +50,7 @@
 }
 
 html {
-    h1, h2, h3, h4  {
+    h1, h2, h4  {
         font-family: "Ubuntu", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
@@ -59,10 +59,11 @@ html {
         margin: 1rem 0;
         strong {
             font-weight: 600;
+            // text-transform: uppercase;
         }
     }
     
-    h5, h6, p, li, label {
+    h3, h5, h6, p, li, label, input, textarea {
         font-family: "MonaspaceNeon", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
@@ -163,9 +164,10 @@ html {
     h6 {
         font-size: .8rem;
         line-height: 1rem;
+        font-style: italic;
     }
     
-    p, li {
+    p, li, label, input, textarea {
         font-size: 1rem;
         line-height: 1.2rem;
     }
