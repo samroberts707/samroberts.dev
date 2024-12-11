@@ -7,3 +7,7 @@
 @use './components/Navigation.scss';
 
 @import 'normalize.css/normalize.css';
+
+body, html {
+    cursor: none;
+}

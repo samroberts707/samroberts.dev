@@ -75,6 +75,10 @@ html {
         }
     }
 
+    .mf-cursor-text {
+        font-family: "MonaspaceNeon", sans-serif;
+    }
+
     label {
         display: inline;
         border: 1px solid var(--oxford-blue);
@@ -137,6 +141,7 @@ html {
         line-height: inherit;
         font-weight: inherit;
         text-decoration: none;
+        cursor: none;
     }
     
     h1 {
@@ -150,12 +155,12 @@ html {
     }
     
     h3 {
-        font-size: 2.5rem;
-        line-height: 2.8rem;
+        font-size: 2rem;
+        line-height: 2.2rem;
     }
     
     h4 {
-        font-size: 2rem;
+        font-size: 28px;
         line-height: 2.3rem;
     }
     

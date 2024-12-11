@@ -13,7 +13,7 @@ export default function Navigation() {
 
     return (
     <nav id="Navigation" className={navOpen ? 'open' : ''}>
-        <div className="hamburger" onClick={handleNavToggle}>
+        <div className="hamburger" onClick={handleNavToggle} data-cursor-text="Menu">
             <div className="bar one" />
             <div className="bar two" />
             <div className="bar three" />
