@@ -1,0 +1,33 @@
+nav#Navigation {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        width: 40px;
+        height: 24px;
+        cursor: pointer;
+        .bar {
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            border-radius: 10px;
+            background-color: var(--oxford-blue);
+            left: 0;
+            &.one {
+                top: 0;
+            }
+            &.two {
+                top: 10px;
+            }
+            &.three {
+                top: 20px;
+            }
+        }
+    }
+}

@@ -3,4 +3,7 @@
 @use './base/colors';
 @use './base/typography';
 
+// Components
+@use './components/Navigation.scss';
+
 @import 'normalize.css/normalize.css';
