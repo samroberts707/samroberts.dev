@@ -23,7 +23,7 @@ export default function Navigation() {
             <div className='items'>
                 <h4><Link href="/">Home</Link></h4>
                 <h4><Link href="/">About</Link></h4>
-                <h4><Link href="/">Projects</Link></h4>
+                <h4><Link href="/projects">Projects</Link></h4>
                 <h4><Link href="/">Contact</Link></h4>
             </div>
             <div className='links'>

@@ -1,3 +1,5 @@
+@use '../components/Project' as *;
+
 div.Homepage {
     display: block;
     position: relative;
@@ -13,9 +15,34 @@ div.Homepage {
                 h1 {
                     margin: 0 0 30px 0;
                     &.c-persian-red {
-                        color: var(--persian-red);
+                        color: var(--xanthous);
                     }
                 }
+            }
+        }
+    }
+    .Projects {
+        .container {
+            .title-layout {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                justify-content: flex-start;
+                gap: 15px;
+                margin: 0 0 30px 0;
+                h2 {
+                    margin: 0;
+                }
+                h6 {
+                    margin: 0 0 10px 0;
+                }
+            }
+            .project-grid {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 30px;
             }
         }
     }

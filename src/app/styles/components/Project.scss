@@ -1,0 +1,19 @@
+div.Project {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    .image-wrapper {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        img.project-image {
+            display: block;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+}
