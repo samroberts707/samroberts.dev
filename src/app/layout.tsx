@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import MouseFollow from "./components/MouseFollow";
-import Navigation from "./components/Navigation";
+import MouseFollow from "@/app/components/MouseFollow";
+import Navigation from "@/app/components/Navigation";
 
 import "@/app/styles/global.scss";
 
