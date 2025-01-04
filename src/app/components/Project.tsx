@@ -5,11 +5,14 @@ import Image from "next/image";
 
 import "@/app/styles/components/Project.scss";
 
-export default function Project({title, url, image}:{title:string, url:string, image:string}) {
+export default function Project(
+    {title, url, image}:
+    {title:string, url:string, image:string}
+) {
     return (
         <div className="Project">
             <Link href={url} className="image-wrapper" data-cursor-text="Open">
-                <Image className="project-image" src={image} alt="Project Name" fill={true} />
+                <Image className="project-image" src={image} alt={title} fill={true} />
             </Link>
             <h4>{title}</h4>
         </div>

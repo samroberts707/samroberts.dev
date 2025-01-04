@@ -27,15 +27,15 @@ export default function Homepage() {
           <div className="project-grid">
             <div className="project-wrapper">
               <h5>Freelance</h5>
-              <Project title="WearNow" url="/projects/wearnow" image="https://picsum.photos/300/?blur=1" />
+              <Project title="WearNow" url="/projects/wearnow" image="/images/projects/wear-now.jpg" />
             </div>
             <div className="project-wrapper">
               <h5>Work</h5>
-              <Project title="Keating Chambers" url="/projects/keating-chambers" image="https://picsum.photos/300/?blur=1" />
+              <Project title="Keating Chambers" url="/projects/keating-chambers" image="https://d2hq2vp6n3e7lp.cloudfront.net/transforms/case-studies/Keating/_caseStudyAssetSplit/22394/04.-Devices_FULLSET_V1.0.webp" />
             </div>
             <div className="project-wrapper">
               <h5>Personal</h5>
-              <Project title="Advent Of Code" url="/projects/advent-of-code" image="https://picsum.photos/300/?blur=1" />
+              <Project title="Advent Of Code" url="/projects/advent-of-code" image="/images/projects/advent-of-code.webp" />
             </div>
           </div>
         </div>
