@@ -1,7 +1,7 @@
 import "@/app/styles/pages/Homepage.scss";
-import Image from "next/image";
 import Link from "next/link";
 
+import ParallaxArtwork from "./components/Parallax-Artwork";
 import Project from "@/app/components/Project";
 
 export default function Homepage() {
@@ -17,6 +17,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
+      <ParallaxArtwork />
       <div className="Projects">
         <div className="container">
           <div className="title-layout">

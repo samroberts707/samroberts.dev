@@ -9,7 +9,7 @@ export default function Project({title, url, image}:{title:string, url:string, i
     return (
         <div className="Project">
             <Link href={url} className="image-wrapper" data-cursor-text="Open">
-                <Image className="project-image" src={image} alt="Project Name" layout="fill" />
+                <Image className="project-image" src={image} alt="Project Name" fill={true} />
             </Link>
             <h4>{title}</h4>
         </div>

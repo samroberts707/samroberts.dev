@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 }  
 
 export default function TypographyPage() {
-    console.log("Hello World");
     return (
         <div className="Typography">
             <div className="container">

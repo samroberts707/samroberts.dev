@@ -21,7 +21,21 @@ div.Homepage {
             }
         }
     }
+    .ParallaxArtwork {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        img.artwork-back {
+            transform: scale(1.05);
+        }
+    }
     .Projects {
+        display: block;
+        position: relative;
+        padding: 150px 0;
         .container {
             .title-layout {
                 display: flex;
