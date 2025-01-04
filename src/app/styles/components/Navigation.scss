@@ -1,9 +1,16 @@
 nav#Navigation {
-    display: block;
+    display: flex;
     position: fixed;
     top: 0;
     right: 0;
+    width: calc(100% - 120px);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px 0 60px;
     z-index: 10;
+    transition: padding .5s ease;
     &.open {
         .hamburger {
             .bar {
@@ -19,11 +26,30 @@ nav#Navigation {
             right: 0;
         }
     }
+    &.scrolled {
+        padding: 20px 60px;
+        // background-color: #dedede;
+        background: rgba(235, 235, 235 ,0.8);
+        backdrop-filter: saturate(200%) blur(5px);
+        box-shadow: 0px 3px 10px 4px rgba(235, 235, 235 ,0.8);
+        .logo {
+            width: 100px;
+            height: 55px;
+        }
+    }
+    .logo {
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 80px;
+        object-fit: contain;
+        object-position: center center;
+        transition: width .5s ease, height .5s ease;
+    }
     .hamburger {
         display: block;
-        position: absolute;
-        top: 40px;
-        right: 60px;
+        position: relative;
+        // margin: 40px 60px 0 0;
         width: 40px;
         height: 24px;
         z-index: 12;
