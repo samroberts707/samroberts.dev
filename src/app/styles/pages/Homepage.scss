@@ -57,11 +57,6 @@ div.Homepage {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 30px;
-                .project-wrapper {
-                    h5 {
-                        margin: 0 0 5px 0;
-                    }
-                }
             }
         }
     }

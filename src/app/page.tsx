@@ -8,7 +8,7 @@ import Project from "@/app/components/Project";
 
 export default function Homepage() {
 
-  let allProjects = getProjectPosts()
+  const allProjects = getProjectPosts()
   
   return (
     <div className="Homepage">
@@ -30,20 +30,20 @@ export default function Homepage() {
             <h6><Link href="/projects">View all projects</Link></h6>
           </div>
           <div className="project-grid">
-          {allProjects
-            .sort((a, b) => {
-              if (
-                new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-              ) {
-                return -1
-              }
-              return 1
-            })
-            .map((post) => (
-              <div className="project-wrapper" key={post.slug}>
-                <h5>{post.metadata.type}</h5>
-                <Project title={post.metadata.title} url={`/projects/${post.slug}`} image={post.metadata.image} summary={post.metadata.summary} />
-              </div>
+            {allProjects
+              .sort((a, b) => {
+                if (
+                  new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+                ) {
+                  return -1
+                }
+                return 1
+              })
+              .slice(0,3)
+              .map((post) => (
+                <div className="project-wrapper" key={post.slug}>
+                  <Project title={post.metadata.title} url={`/projects/${post.slug}`} image={post.metadata.image} summary={post.metadata.summary} type={post.metadata.type} />
+                </div>
             ))}
           </div>
         </div>
