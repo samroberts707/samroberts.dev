@@ -2,10 +2,14 @@ import "@/app/styles/pages/Homepage.scss";
 
 import Link from "next/link";
 
+import { formatDate, getProjectPosts } from '@/app/projects/utils';
 import ParallaxArtwork from "./components/Parallax-Artwork";
 import Project from "@/app/components/Project";
 
 export default function Homepage() {
+
+  let allProjects = getProjectPosts()
+  
   return (
     <div className="Homepage">
       <div className="Landing">
@@ -26,18 +30,21 @@ export default function Homepage() {
             <h6><Link href="/projects">View all projects</Link></h6>
           </div>
           <div className="project-grid">
-            <div className="project-wrapper">
-              <h5>Freelance</h5>
-              <Project title="WearNow" url="/projects/wearnow" image="/images/projects/wear-now.jpg" />
-            </div>
-            <div className="project-wrapper">
-              <h5>Work</h5>
-              <Project title="Keating Chambers" url="/projects/keating-chambers" image="https://d2hq2vp6n3e7lp.cloudfront.net/transforms/case-studies/Keating/_caseStudyAssetSplit/22394/04.-Devices_FULLSET_V1.0.webp" />
-            </div>
-            <div className="project-wrapper">
-              <h5>Personal</h5>
-              <Project title="Advent Of Code" url="/projects/advent-of-code" image="/images/projects/advent-of-code.webp" />
-            </div>
+          {allProjects
+            .sort((a, b) => {
+              if (
+                new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+              ) {
+                return -1
+              }
+              return 1
+            })
+            .map((post) => (
+              <div className="project-wrapper" key={post.slug}>
+                <h5>{post.metadata.type}</h5>
+                <Project title={post.metadata.title} url={`/projects/${post.slug}`} image={post.metadata.image} summary={post.metadata.summary} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import "@/app/styles/components/Project.scss";
+import "@/app/styles/components/Footer.scss";
 
 export default function Footer() {
     return (
