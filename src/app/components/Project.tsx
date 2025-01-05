@@ -11,7 +11,7 @@ export default function Project(
 ) {
     return (
         <div className="Project">
-            <Link href={url} className="image-wrapper" data-cursor-text="Open">
+            <Link href={''} className="image-wrapper" data-cursor-text="Coming Soon">
                 <Image className="project-image" src={image} alt={title} fill={true} />
             </Link>
             <h4>{title}</h4>

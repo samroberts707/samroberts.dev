@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="Footer">
             <div className="container">
                 <div className="info">
-                    <h6>Sam Roberts &copy; 2025</h6>
+                    <h6>Sam Roberts &copy; {(new Date().getFullYear())}</h6>
                 </div>
                 <div className="socials">
                     <Link href="https://github.com/samroberts707" target="_blank">
