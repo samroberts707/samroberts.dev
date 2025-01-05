@@ -1,4 +1,5 @@
 import "@/app/styles/pages/Homepage.scss";
+
 import Link from "next/link";
 
 import ParallaxArtwork from "./components/Parallax-Artwork";

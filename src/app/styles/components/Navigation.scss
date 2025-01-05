@@ -10,7 +10,7 @@ nav#Navigation {
     align-items: center;
     padding: 40px 60px 0 60px;
     z-index: 10;
-    transition: padding .5s ease;
+    transition: width .5s ease, padding .5s ease, background .5s ease, backdrop-filter .5s ease, box-shadow .5s ease;
     &.open {
         .hamburger {
             .bar {
@@ -100,6 +100,20 @@ nav#Navigation {
             h4 {
                 margin: 0;
             }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding: 15px 20px;
+        width: calc(100% - 40px);
+        &.scrolled {
+            padding: 15px 20px;
+        }
+        .logo {
+            width: 100px;
+            height: 55px;
+        }
+        .menu {
+            max-width: calc(100vw - 325px);
         }
     }
 }

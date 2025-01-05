@@ -65,4 +65,35 @@ div.Homepage {
             }
         }
     }
+    @media screen and (max-width: 990px) {
+        .Projects {
+            .container {
+                .project-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .Landing {
+            padding: 50vh 0 150px 0;
+            .container {
+                .content {
+                    padding: 0 var(--mobile-padding);
+                }
+            }
+        }
+        .Projects {
+            padding: 70px 0;
+            .container {
+                .title-layout {
+                    padding: 0 var(--mobile-padding);
+                }
+                .project-grid {
+                    padding: 0 var(--mobile-padding);
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
 }
