@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import "@/app/styles/components/Project.scss";
+import "@/app/styles/components/Footer.scss";
 
 export default function Project(
     {title, url, image}:

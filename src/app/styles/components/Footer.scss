@@ -1,0 +1,33 @@
+div.Footer {
+    display: block;
+    position: relative;
+    padding: 60px 0;
+    .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        .info {
+            h6 {
+                margin: 0;
+            }
+        }
+        .socials {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 10px;
+            img {
+                display: block;
+                position: relative;
+                object-fit: contain;
+                object-position: center center;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

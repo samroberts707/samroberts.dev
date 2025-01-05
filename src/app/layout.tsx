@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import MouseFollow from "@/app/components/MouseFollow";
 import Navigation from "@/app/components/Navigation";
+import Footer from "@/app/components/Footer";
 
 import "@/app/styles/global.scss";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         <MouseFollow />
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );
