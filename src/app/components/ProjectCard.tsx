@@ -6,7 +6,7 @@ import Image from "next/image";
 // import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 // import { useGSAP } from '@gsap/react';
 
-// import "@/app/styles/components/Footer.scss";
+import "@/app/styles/components/ProjectCard.scss";
 
 // if (typeof window !== 'undefined') {
 //     gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -24,7 +24,7 @@ export default function ProjectCard(
     // )
 
     return (
-        <div className="Project">
+        <div className="ProjectCard">
             <h5>{type}</h5>
             <Link href={url} className="image-wrapper" data-cursor-text="View">
                 <Image className="project-image" src={image} alt={title} fill={true} />
