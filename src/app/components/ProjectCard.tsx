@@ -12,7 +12,7 @@ import Image from "next/image";
 //     gsap.registerPlugin(ScrollTrigger, useGSAP);
 // }
 
-export default function Project(
+export default function ProjectCard(
     {title, url, image, summary, type}:
     {title:string, url:string, image:string, summary: string, type: string}
 ) {

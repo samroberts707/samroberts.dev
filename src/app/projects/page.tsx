@@ -1,7 +1,7 @@
 import "@/app/styles/pages/Projects.scss";
 
 import { formatDate, getProjectPosts } from '@/app/projects/utils';
-import Project from "@/app/components/Project";
+import ProjectCard from "@/app/components/ProjectCard";
 
 export default function Projects() {
 
@@ -25,7 +25,7 @@ export default function Projects() {
                     })
                     .map((post) => (
                     <div className="project-wrapper" key={post.slug}>
-                        <Project title={post.metadata.title} url={`/projects/${post.slug}`} image={post.metadata.image} summary={post.metadata.summary} type={post.metadata.type} />
+                        <ProjectCard title={post.metadata.title} url={`/projects/${post.slug}`} image={post.metadata.image} summary={post.metadata.summary} type={post.metadata.type} />
                     </div>
                 ))}
                 </div>

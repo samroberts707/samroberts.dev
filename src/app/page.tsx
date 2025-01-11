@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { formatDate, getProjectPosts } from '@/app/projects/utils';
 import ParallaxArtwork from "./components/Parallax-Artwork";
-import Project from "@/app/components/Project";
+import ProjectCard from "@/app/components/ProjectCard";
 
 export default function Homepage() {
 
@@ -42,7 +42,7 @@ export default function Homepage() {
               .slice(0,3)
               .map((post) => (
                 <div className="project-wrapper" key={post.slug}>
-                  <Project title={post.metadata.title} url={`/projects/${post.slug}`} image={post.metadata.image} summary={post.metadata.summary} type={post.metadata.type} />
+                  <ProjectCard title={post.metadata.title} url={`/projects/${post.slug}`} image={post.metadata.image} summary={post.metadata.summary} type={post.metadata.type} />
                 </div>
             ))}
           </div>
