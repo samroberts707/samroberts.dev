@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+@font-face {
+    font-family: "MonaspaceNeon";
+    src: url('/fonts/MonaspaceNeon-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "MonaspaceNeon";
+    src: url('/fonts/MonaspaceNeon-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "MonaspaceNeon";
+    src: url('/fonts/MonaspaceNeon-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MonaspaceNeon";
+    src: url('/fonts/MonaspaceNeon-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "MonaspaceKrypton";
+    src: url('/fonts/MonaspaceKrypton-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "MonaspaceKrypton";
+    src: url('/fonts/MonaspaceKrypton-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "MonaspaceKrypton";
+    src: url('/fonts/MonaspaceKrypton-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MonaspaceKrypton";
+    src: url('/fonts/MonaspaceKrypton-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+html {
+    h1, h2, h4  {
+        font-family: "Ubuntu", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--oxford-blue);
+        margin: 1rem 0;
+        strong {
+            font-weight: 600;
+            // text-transform: uppercase;
+        }
+    }
+    
+    h3, h5, h6, p, li, label, input, textarea {
+        font-family: "MonaspaceNeon", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--oxford-blue);
+        margin: 1rem 0;
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    .mf-cursor-text {
+        font-family: "MonaspaceNeon", sans-serif;
+    }
+
+    label {
+        display: inline;
+        border: 1px solid var(--oxford-blue);
+        border-radius: 20px;
+        padding: 7px 12px;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    code {
+        display: inline-block;
+        padding: 20px 20px;
+        background-color: #ECECEC;
+        border-radius: 10px;
+        margin: 2rem 0;
+        p {
+            font-family: "MonaspaceKrypton", "MonaspaceNeon", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            color: var(--hunter-green);
+            margin: .3rem 0;
+            span {
+                color: var(--persian-red);
+            }
+            em, i {
+                color: #AAAAAA;
+            }
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, p, li {
+        a {
+            position: relative;
+            color: var(--oxford-blue);
+            &:hover::before {
+                bottom: -2px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: -2%;
+                bottom: -7px;
+                width: 100%;
+                height: 7px;
+                transform: skew(-12deg);
+                background: var(--xanthous);
+                opacity: .7;
+                z-index: 0;
+                transition: .2s ease-in-out;
+            }
+        }
+    }
+    
+    a {
+        font-size: inherit;
+        font-style: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        text-decoration: none;
+        cursor: none;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+    
+    h4 {
+        font-size: 28px;
+        line-height: 2.3rem;
+    }
+    
+    h5 {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+    
+    h6 {
+        font-size: .8rem;
+        line-height: 1rem;
+        font-style: italic;
+    }
+    
+    p, li, label, input, textarea {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+}

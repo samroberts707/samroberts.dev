@@ -1,0 +1,14 @@
+// Base Styles
+@use './container.min.css';
+@use './base/colors';
+@use './base/typography';
+
+@import 'normalize.css/normalize.css';
+
+body, html {
+    cursor: none;
+}
+
+:root {
+    --mobile-padding: 30px;
+}

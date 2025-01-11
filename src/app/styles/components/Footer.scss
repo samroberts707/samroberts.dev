@@ -1,0 +1,44 @@
+div.Footer {
+    display: block;
+    position: relative;
+    padding: 60px 0;
+    .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 30px;
+        .info {
+            h6 {
+                margin: 0;
+            }
+        }
+        .socials {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 10px;
+            img {
+                display: block;
+                position: relative;
+                object-fit: contain;
+                object-position: center center;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            .info, .socials {
+                padding: 0 var(--mobile-padding);
+            }
+        }
+    }
+}
