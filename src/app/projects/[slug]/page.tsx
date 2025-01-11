@@ -2,19 +2,23 @@ import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/app/components/mdx'
 import { formatDate, getProjectPosts } from '@/app/projects/utils';
 import { baseUrl } from '@/app/sitemap';
+import { Metadata } from 'next';
 
 import "@/app/styles/pages/Project.scss";
 
+type Params = Promise<{ slug: string }>
+
 export async function generateStaticParams() {
-  let posts = getProjectPosts()
+  const posts = getProjectPosts()
 
   return posts.map((post) => ({
     slug: post.slug,
   }))
 }
 
-export function generateMetadata({ params }) {
-  const post = getProjectPosts().find((post) => post.slug === params.slug);
+export async function generateMetadata( { params }: { params: Params }) {
+  const { slug } = await params
+  const post = getProjectPosts().find((post) => post.slug === slug);
   if (!post) {
     return
   } else {
@@ -42,8 +46,9 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Blog({ params }) {
-  let post = getProjectPosts().find((post) => post.slug === params.slug)
+export default async function Project( { params }: { params: Params }) {
+  const { slug } = await params
+  const post = getProjectPosts().find((post) => post.slug === slug)
 
   if (!post) {
     notFound()

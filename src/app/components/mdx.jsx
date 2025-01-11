@@ -4,7 +4,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
 
-function Table({ data }: {data: object}) {
+function Table({ data }) {
   const headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ))
