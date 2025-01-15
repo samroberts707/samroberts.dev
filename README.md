@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/04dab4ba-a433-4247-b6a7-650a455d7f42/deploy-status)](https://app.netlify.com/sites/samroberts/deploys)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
