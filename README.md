@@ -1,38 +1,73 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/04dab4ba-a433-4247-b6a7-650a455d7f42/deploy-status)](https://app.netlify.com/sites/samroberts/deploys)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/27c1f282e7e54d7c80bc0b2d8e3816f4)](https://app.codacy.com/gh/samroberts707/samroberts.dev/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sam Roberts Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website! This project showcases my skills, projects, and experience as a web developer. Built using [Next.js](https://nextjs.org/), it is hosted on [Netlify](https://www.netlify.com/) for seamless deployment and performance.
 
-First, run the development server:
+## Features
+- **Responsive Design**: Optimized for all devices.
+- **Dynamic Projects Section**: Easily update showcased projects.
+- **Fast and Reliable**: Powered by Next.js and deployed on Netlify.
+- **SEO Friendly**: Built-in optimizations for better search visibility.
 
+## Installation and Setup
+To set up and run this project locally, follow these steps:
+
+### Prerequisites
+- Node.js (v20 or newer)
+- npm or yarn package manager
+
+### Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/samroberts707/samroberts.dev.git
+cd portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
+Using npm:
+```bash
+npm install
+```
+Or using yarn:
+```bash
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run the Development Server
+Start the development server to preview the site locally:
+```bash
+npm run dev
+```
+Or using yarn:
+```bash
+yarn dev
+```
+Open your browser and navigate to `http://localhost:3000` to view the portfolio.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
+To build the project for production:
+```bash
+npm run build
+```
+Or using yarn:
+```bash
+yarn build
+```
+The optimized build will be available in the `.next` directory.
 
-## Learn More
+### Deploy to Netlify
+1. Connect your repository to Netlify.
+2. Set the build command to `npm run build` or `yarn build`.
+3. Specify the output directory as `out` (default for static export).
 
-To learn more about Next.js, take a look at the following resources:
+## Contributions
+Feel free to fork this repository and submit pull requests with improvements or ideas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
+This project is licensed under the [MIT License](LICENSE).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+For any questions or inquiries, please contact me at [samroberts707@gmail.com](mailto:samroberts707@gmail.com).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
