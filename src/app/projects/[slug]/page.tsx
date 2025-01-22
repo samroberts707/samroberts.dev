@@ -29,7 +29,7 @@ export async function generateMetadata( { params }: { params: Params }) {
         title: `${post.metadata.title} | Sam Roberts`,
         description: post.metadata.summary,
         type: 'article',
-        url: `${baseUrl}/blog/${post.slug}`,
+        url: `${baseUrl}/projects/${post.slug}`,
         images: [
           {
             url: `${baseUrl}${post.metadata.image}`,
@@ -46,7 +46,7 @@ export async function generateMetadata( { params }: { params: Params }) {
   }
 }
 
-export default async function Project( { params }: { params: Params }) {
+export default async function Project( { params }: { params: Params } ) {
   const { slug } = await params
   const post = getProjectPosts().find((post) => post.slug === slug)
 
@@ -69,13 +69,13 @@ export default async function Project( { params }: { params: Params }) {
           <CustomMDX source={post.content} />
         </article>
       </div>
-      {/* <script
+      <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
+            '@type': 'CaseStudy',
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
@@ -83,14 +83,14 @@ export default async function Project( { params }: { params: Params }) {
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
+            url: `${baseUrl}/projects/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: 'Sam Roberts',
             },
           }),
         }}
-      /> */}
+      />
     </div>
   )
 }
