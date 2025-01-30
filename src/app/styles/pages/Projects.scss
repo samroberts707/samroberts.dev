@@ -10,7 +10,7 @@ div.Projects.page {
             position: relative;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
+            gap: 80px 40px;
         }
     }
     @media screen and (max-width: 990px) {
@@ -25,6 +25,7 @@ div.Projects.page {
             .project-grid {
                 padding: 0 var(--mobile-padding);
                 grid-template-columns: 1fr;
+                gap: 60px 40px;
             }
         }
     }
