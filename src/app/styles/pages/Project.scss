@@ -1,5 +1,48 @@
 div.Project.page {
     display: block;
     position: relative;
-    padding: 220px 0 70px 0;
+    padding: 180px 0 70px 0;
+    .container {
+        .split {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px 100px;
+            .summary {
+                .image-wrapper {
+                    display: block;
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                    border-radius: 24px;
+                    .project-image {
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                        object-position: center center;
+                        aspect-ratio: 1/1;
+                    }
+                }
+                h1 {
+
+                }
+                h5 {
+
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 990px) {
+        padding: 70px 0;
+        .container {
+            .split {
+                grid-template-columns: 1fr;
+                padding: 0 var(--mobile-padding);
+            }
+        }
+    }
 }

@@ -3,6 +3,7 @@ import { CustomMDX } from '@/app/components/mdx'
 import { formatDate, getProjectPosts } from '@/app/projects/utils';
 import { baseUrl } from '@/app/sitemap';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 import "@/app/styles/pages/Project.scss";
 
@@ -57,17 +58,19 @@ export default async function Project( { params }: { params: Params } ) {
   return (
     <div className='Project page'>
       <div className='container'>
-        <h1 className="title font-semibold text-2xl tracking-tighter">
-          {post.metadata.title}
-        </h1>
-        <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {formatDate(post.metadata.publishedAt)}
-          </p>
+        <div className='split'>
+          <div className='summary'>
+            <div className='image-wrapper'>
+              <Image className='project-image' src={post.metadata.image} alt={post.metadata.title} width={300} height={300} />
+            </div>
+            <h1>{post.metadata.title}</h1>
+            <h5 className='type'>{post.metadata.type}</h5>
+          </div>
+          <div className="content">
+            <CustomMDX source={post.content} />
+          </div>
         </div>
-        <article className="prose">
-          <CustomMDX source={post.content} />
-        </article>
+        
       </div>
       <script
         type="application/ld+json"
