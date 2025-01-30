@@ -18,7 +18,7 @@ export default function Footer() {
                         <Image src='/images/LinkedIn_SVG.svg' alt="LinkedIn Logo" width={40} height={40} />
                     </Link>
                     <Link href="mailto:samroberts707@gmail.com" target="_blank">
-                        <Image src='/images/Mail_SVG.svg' alt="Github Logo" width={35} height={25} />
+                        <Image src='/images/Mail_SVG.svg' alt="Github Logo" width={45} height={32} />
                     </Link>
                 </div>
             </div>
