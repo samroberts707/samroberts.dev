@@ -12,13 +12,13 @@ export default function Footer() {
                 </div>
                 <div className="socials">
                     <Link href="https://github.com/samroberts707" target="_blank">
-                        <Image src='/images/github.png' alt="Github Logo" width={40} height={40} />
+                        <Image src='/images/GitHub_SVG.svg' alt="Github Logo" width={40} height={40} />
                     </Link>
                     <Link href="https://www.linkedin.com/in/samroberts707/" target="_blank">
-                        <Image src='/images/linkedin.png' alt="LinkedIn Logo" width={40} height={40} />
+                        <Image src='/images/LinkedIn_SVG.svg' alt="LinkedIn Logo" width={40} height={40} />
                     </Link>
                     <Link href="mailto:samroberts707@gmail.com" target="_blank">
-                        <Image src='/images/mail.png' alt="Github Logo" width={35} height={25} />
+                        <Image src='/images/Mail_SVG.svg' alt="Github Logo" width={35} height={25} />
                     </Link>
                 </div>
             </div>
